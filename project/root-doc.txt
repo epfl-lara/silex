@@ -1,0 +1,4 @@
+==Overview==
+
+Silex is a library for easily writing lexers in Scala.
+See the package [[silex]] for more information.
