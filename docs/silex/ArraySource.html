@@ -130,16 +130,16 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="silex">silex</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="ArraySource.html" title=""></a>
-                        <a href="ArraySource.html" title="">ArraySource</a>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">ArraySource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="CharRegExps.html" title="Regular expressions on Char characters."></a>
                         <a href="CharRegExps.html" title="Regular expressions on Char characters.">CharRegExps</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="" title="General index-based positioner."></a>
-                        <a href="" title="General index-based positioner.">IndexPositioner</a>
+                        <a class="object" href="IndexPositioner$.html" title="General index-based positioner."></a>
+                        <a href="IndexPositioner$.html" title="General index-based positioner.">IndexPositioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="IteratorSource.html" title="Source over an iterator."></a>
@@ -177,12 +177,12 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
             </div>
           </div>
           <div id="content">
-            <body class="object value">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle object">o</div>
+        <div class="big-circle class">c</div>
         <p id="owner"><a href="index.html" class="extype" name="silex">silex</a></p>
-        <h1>IndexPositioner<span class="permalink">
-      <a href="../silex/IndexPositioner$.html" title="Permalink">
+        <h1>ArraySource<span class="permalink">
+      <a href="../silex/ArraySource.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -192,20 +192,19 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IndexPositioner</span><span class="result"> extends <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">ArraySource</span><span class="tparams">[<span name="Character">Character</span>, <span name="Position">Position</span>]</span><span class="result"> extends <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="silex.ArraySource.Character">Character</span>, <span class="extype" name="silex.ArraySource.Position">Position</span>]</span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>General index-based positioner.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Positions.scala" target="_blank">Positions.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Sources.scala" target="_blank">Sources.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="silex.ArraySource.Character">Character</span>, <span class="extype" name="silex.ArraySource.Position">Position</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -231,7 +230,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="silex.IndexPositioner"><span>IndexPositioner</span></li><li class="in" name="silex.Positioner"><span>Positioner</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="silex.ArraySource"><span>ArraySource</span></li><li class="in" name="silex.Source"><span>Source</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -249,7 +248,26 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="silex.ArraySource#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(array:Array[Character],positioner:silex.Positioner[Character,Position]):silex.ArraySource[Character,Position]"></a><a id="&lt;init&gt;:ArraySource[Character,Position]"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#&lt;init&gt;(array:Array[Character],positioner:silex.Positioner[Character,Position]):silex.ArraySource[Character,Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ArraySource</span><span class="params">(<span name="array">array: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="silex.ArraySource.Character">Character</span>]</span>, <span name="positioner">positioner: <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="silex.ArraySource.Character">Character</span>, <span class="extype" name="silex.ArraySource.Position">Position</span>]</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         
 
@@ -261,7 +279,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../silex/ArraySource.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -277,7 +295,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html###():Int" title="Permalink">
+      <a href="../silex/ArraySource.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -293,7 +311,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../silex/ArraySource.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -306,10 +324,27 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="silex.ArraySource#ahead" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ahead():Character"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#ahead():Character" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ahead</span><span class="params">()</span><span class="result">: <span class="extype" name="silex.ArraySource.Character">Character</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Advances the lookahead pointer by one character in the sequence.</p><div class="fullcomment"><div class="comment cmt"><p>Advances the lookahead pointer by one character in the sequence.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The character that was advanced over.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ArraySource">ArraySource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../silex/ArraySource.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -322,10 +357,58 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="silex.ArraySource#atEnd" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="atEnd:Boolean"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#atEnd:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">atEnd</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Checks if the lookahead pointer is at the end of the sequence.</p><div class="fullcomment"><div class="comment cmt"><p>Checks if the lookahead pointer is at the end of the sequence.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ArraySource">ArraySource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
+    </li><li name="silex.ArraySource#back" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="back():Unit"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#back():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">back</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Resets the lookahead pointer.</p><div class="fullcomment"><div class="comment cmt"><p>Resets the lookahead pointer.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ArraySource">ArraySource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
+    </li><li name="silex.ArraySource#backContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="backContent():Seq[Character]"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#backContent():Seq[Character]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">backContent</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="silex.ArraySource.Character">Character</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Resets the lookahead pointer.</p><div class="fullcomment"><div class="comment cmt"><p>Resets the lookahead pointer.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ArraySource">ArraySource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#clone():Object" title="Permalink">
+      <a href="../silex/ArraySource.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -346,10 +429,43 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="silex.ArraySource#consume" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="consume():Seq[Character]"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#consume():Seq[Character]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">consume</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="silex.ArraySource.Character">Character</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Consumes all characters that are currently looked ahead.</p><div class="fullcomment"><div class="comment cmt"><p>Consumes all characters that are currently looked ahead.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The sequence of characters.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ArraySource">ArraySource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
+    </li><li name="silex.ArraySource#currentPosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentPosition:Position"></a>
+      <span class="permalink">
+      <a href="../silex/ArraySource.html#currentPosition:Position" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentPosition</span><span class="result">: <span class="extype" name="silex.ArraySource.Position">Position</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Current position of the lookahead pointer in the source.</p><div class="fullcomment"><div class="comment cmt"><p>Current position of the lookahead pointer in the source.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ArraySource">ArraySource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../silex/ArraySource.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -365,7 +481,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../silex/ArraySource.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -381,7 +497,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#finalize():Unit" title="Permalink">
+      <a href="../silex/ArraySource.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -403,7 +519,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#getClass():Class[_]" title="Permalink">
+      <a href="../silex/ArraySource.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -422,7 +538,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#hashCode():Int" title="Permalink">
+      <a href="../silex/ArraySource.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -438,29 +554,10 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="silex.IndexPositioner#increment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="increment(position:Int,character:Any):Int"></a><a id="increment(Int,Any):Int"></a>
-      <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#increment(position:Int,character:Any):Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">increment</span><span class="params">(<span name="position">position: <span class="extype" name="scala.Int">Int</span></span>, <span name="character">character: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Increments a <code>position</code> by a single <code>character</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Increments a <code>position</code> by a single <code>character</code>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.IndexPositioner">IndexPositioner</a> → <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a></dd><dt>Annotations</dt><dd>
-                <span class="name">@inline</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../silex/ArraySource.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -476,7 +573,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../silex/ArraySource.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -492,7 +589,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#notify():Unit" title="Permalink">
+      <a href="../silex/ArraySource.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -511,7 +608,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#notifyAll():Unit" title="Permalink">
+      <a href="../silex/ArraySource.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -527,26 +624,10 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="silex.IndexPositioner#start" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="start:Int"></a>
-      <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#start:Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">start</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">The start position.</p><div class="fullcomment"><div class="comment cmt"><p>The start position.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.IndexPositioner">IndexPositioner</a> → <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../silex/ArraySource.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -562,7 +643,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#toString():String" title="Permalink">
+      <a href="../silex/ArraySource.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -578,7 +659,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#wait():Unit" title="Permalink">
+      <a href="../silex/ArraySource.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -600,7 +681,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../silex/ArraySource.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -622,7 +703,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../silex/IndexPositioner$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../silex/ArraySource.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -653,8 +734,8 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="silex.Positioner">
-              <h3>Inherited from <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Int">Int</span>]</h3>
+        <div class="parent" name="silex.Source">
+              <h3>Inherited from <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="silex.ArraySource.Character">Character</span>, <span class="extype" name="silex.ArraySource.Position">Position</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
