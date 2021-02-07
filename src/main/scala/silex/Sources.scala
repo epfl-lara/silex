@@ -15,6 +15,8 @@
 
 package silex
 
+import scala.collection.mutable.ArrayBuffer
+
 /** Represents a sequence of characters mutably traversed over.
   *
   * The sequence can be traversed only once, but arbitrary long lookaheads are supported.
@@ -104,9 +106,9 @@ object Source {
       string: String,
       positioner: Positioner[Char, Position]): Source[Char, Position] = {
 
-    val iterator = string.iterator
+    val array = string.toArray
 
-    new IteratorSource[Char, Position](iterator, positioner)
+    new ArraySource[Char, Position](array, positioner)
   }
 
   /** Builds a source from an `iterator` and a `positioner`. */
@@ -118,6 +120,61 @@ object Source {
   }
 }
 
+class ArraySource[Character, Position](
+      array: Array[Character],
+      positioner: Positioner[Character, Position])
+    extends Source[Character, Position] {
+
+  private var baseIndex: Int = 0
+  private var aheadIndex: Int = 0
+  private var basePos: Position = positioner.start
+  private var aheadPos: Position = positioner.start
+
+
+  /** Checks if the lookahead pointer is at the end of the sequence. */
+  def atEnd: Boolean = aheadIndex >= array.length
+
+  /** Advances the lookahead pointer by one character in the sequence.
+    *
+    * @return The character that was advanced over.
+    */
+  def ahead(): Character = {
+    val res = array(aheadIndex)
+    aheadIndex += 1
+    aheadPos = positioner.increment(aheadPos, res)
+    res
+  }
+
+  /** Consumes all characters that are currently looked ahead.
+    *
+    * @return The sequence of characters.
+    */
+  def consume(): Seq[Character] = {
+    val res = array.slice(baseIndex, aheadIndex)
+    basePos = aheadPos
+    baseIndex = aheadIndex
+    res
+  }
+
+  /** Resets the lookahead pointer. */
+  def back(): Unit = {
+    aheadPos = basePos
+    aheadIndex = baseIndex
+  }
+
+  /** Resets the lookahead pointer. */
+  def backContent(): Seq[Character] = {
+    val res = array.slice(baseIndex, aheadIndex)
+    back()
+    res
+  }
+
+  /** Current position of the lookahead pointer in the source. */
+  def currentPosition: Position = aheadPos
+}
+
+
+
 /** Source over an iterator.
   *
   * @group source
@@ -127,29 +184,31 @@ class IteratorSource[Character, Position](
       positioner: Positioner[Character, Position])
     extends Source[Character, Position] {
 
-  private var buffer: Vector[Character] = Vector()
-  private var index: Int = 0
+  private var buffer: ArrayBuffer[Character] = new ArrayBuffer()
+  private var baseIndex: Int = 0
+  private var aheadIndex: Int = 0
   private var basePos: Position = positioner.start
   private var aheadPos: Position = positioner.start
 
+
   /** Checks if the lookahead pointer is at the end of the sequence. */
-  def atEnd: Boolean = !iterator.hasNext && index >= buffer.size
+  def atEnd: Boolean = aheadIndex >= buffer.size && !iterator.hasNext
 
   /** Advances the lookahead pointer by one character in the sequence.
     *
     * @return The character that was advanced over.
     */
   def ahead(): Character = {
-    if (index >= buffer.size) {
+    if (aheadIndex >= buffer.size) {
       val res = iterator.next()
-      buffer :+= res
-      index += 1
+      buffer += res
+      aheadIndex += 1
       aheadPos = positioner.increment(aheadPos, res)
       res
     }
     else {
-      val res = buffer(index)
-      index += 1
+      val res = buffer(aheadIndex)
+      aheadIndex += 1
       aheadPos = positioner.increment(aheadPos, res)
       res
     }
@@ -160,24 +219,22 @@ class IteratorSource[Character, Position](
     * @return The sequence of characters.
     */
   def consume(): Seq[Character] = {
-    val (res, newBuffer) = buffer.splitAt(index)
-    buffer = newBuffer
+    val res = buffer.slice(baseIndex, aheadIndex)
     basePos = aheadPos
-    index = 0
+    baseIndex = aheadIndex
     res
   }
 
   /** Resets the lookahead pointer. */
   def back(): Unit = {
     aheadPos = basePos
-    index = 0
+    aheadIndex = baseIndex
   }
 
   /** Resets the lookahead pointer. */
   def backContent(): Seq[Character] = {
-    val res = buffer.take(index)
-    aheadPos = basePos
-    index = 0
+    val res = buffer.slice(baseIndex, aheadIndex)
+    back()
     res
   }
 

@@ -1,4 +1,4 @@
-/* Copyright 2020 EPFL, Lausanne
+/* Copyright 2021 EPFL, Lausanne
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +17,13 @@ package silex
 
 import scala.collection.mutable.ArrayBuffer
 
-import silex.util.{Automatons, BufferedIterator}
+import silex.util.{Zippers, BufferedIterator}
 
 /** Contains definitions for lexers.
   *
   * @group lexer
   */
-trait Lexers extends RegExps with Automatons {
+trait Lexers extends RegExps with Zippers {
 
   /** Type of tokens.
     *
@@ -97,7 +97,7 @@ trait Lexers extends RegExps with Automatons {
         /** Indicates if the source has ended. */
         private var ended: Boolean = false
 
-        /** Cache for the next. Computed by `hasNext()` or `next()`. */
+        /** Cache for the next. Computed by `hasNext` or `next()`. */
         private var cacheNext: Option[Token] = None
 
         /** Queries the source for the next token and update the state. */
@@ -110,7 +110,7 @@ trait Lexers extends RegExps with Automatons {
             return
           }
 
-          tokenizeOneAutomata(source) match {
+          tokenizeOneZipper(source) match {
             case Some(token) => cacheNext = Some(token)
             case None => {
               val endPos = source.currentPosition
@@ -127,11 +127,11 @@ trait Lexers extends RegExps with Automatons {
           }
         }
 
-        override def hasNext(): Boolean = cacheNext match {
+        override def hasNext: Boolean = cacheNext match {
           case Some(_) => true
           case None => if (ended) false else {
             fetchNext()
-            hasNext()
+            hasNext
           }
         }
 
@@ -181,7 +181,7 @@ trait Lexers extends RegExps with Automatons {
               return
             }
 
-            tokenizeOneAutomata(source) match {
+            tokenizeOneZipper(source) match {
               case Some(token) => {
                 buffer = buffer :+ token
 
@@ -232,13 +232,15 @@ trait Lexers extends RegExps with Automatons {
     private val makeTokens = producers.map(_.makeToken).toArray
 
     // The automata corresponding to the regular expressions, as an array for fast access.
-    private val dfas = producers.map(p => DFA(NFA(p.regExp))).toArray
+    private val machines = producers.map(p => new DFA(p.regExp)).toArray
 
     // The lists of start positions and indices. A list for fast flatMap.
-    private val starts = List.tabulate(dfas.size)(n => (0, n))
+    private val starts = machines.toList.zipWithIndex.map {
+      case (m, n) => (m.initial, n)
+    }
 
     /** Tries to produce a single token from the source. Uses automata. */
-    private def tokenizeOneAutomata(source: Source[Character, Position]): Option[Token] = {
+    private def tokenizeOneZipper(source: Source[Character, Position]): Option[Token] = {
 
       // The state and index of active automata.
       var states = starts
@@ -258,27 +260,27 @@ trait Lexers extends RegExps with Automatons {
       while (states.nonEmpty && !source.atEnd) {
         val char = source.ahead()
 
-        // Indicates if an automaton was accepting
+        // Indicates if a machine was accepting
         // for this character already.
         var accepted = false
 
-        // Updates the states of all automata and
+        // Updates the states of all machines and
         // filter out the ones which can no longer
         // reach an accepting state.
         states = states.flatMap {
           case (current, index) => {
-            val dfa = dfas(index)
-            val next = dfa(current, char)
+            val currentMachine = machines(index)
+            val next = currentMachine(current, char)
 
             // Also records the first accepting automaton.
-            if (!accepted && dfa.isAccepting(next)) {
+            if (!accepted && next.isAccepting) {
               endPos = source.currentPosition
               buffer ++= source.consume()
               successful = Some(index)
               accepted = true
             }
 
-            if (dfa.isLive(next)) {
+            if (!next.isCompleted) {
               (next, index) :: Nil
             }
             else {
@@ -298,65 +300,6 @@ trait Lexers extends RegExps with Automatons {
         val token = makeTokens(index)(buffer.toSeq, range)
 
         token
-      }
-    }
-
-    /** Tries to produce a single token from the source. Uses regular expression derivation. */
-    private def tokenizeOneDerivation(source: Source[Character, Position]): Option[Token] = {
-
-      // The first producer that was successful on the longest subsequence so far.
-      var lastSuccessfulProducer: Option[Producer] = None
-
-      // The producers which can potentially produce
-      // something depending on the next characters.
-      var activeProducers: List[Producer] = producers
-
-      // The sequence of characters that are consumed so far.
-      val buffer: ArrayBuffer[Character] = new ArrayBuffer()
-
-      // The start position in the source.
-      val startPos = source.currentPosition
-
-      // The position after the consumed characters.
-      var endPos = startPos
-
-      // Loops as long as some producers can potentially produce,
-      // and as long as the source is not empty.
-      while (activeProducers.nonEmpty && !source.atEnd) {
-        val char = source.ahead()  // Next character.
-
-        // Feeds the character to all regexps,
-        // resulting in new regexps that handle the rest of input.
-        activeProducers = activeProducers.flatMap {
-          case Producer(regExp, makeToken) => regExp.derive(char) match {
-            // When the regExp is EmptySet, we can ignore the producer.
-            case RegExp.EmptySet => Nil
-            // Otherwise, we update it.
-            case derived => Producer(derived, makeToken) :: Nil
-          }
-        }
-
-        // Finds the first producer that accepts the entire subsequence, if any.
-        activeProducers.find(_.regExp.acceptsEmpty).foreach { (prod: Producer) =>
-          endPos = source.currentPosition
-          buffer ++= source.consume()  // Consumes all that was read so far.
-          lastSuccessfulProducer = Some(prod)
-        }
-      }
-
-
-      lastSuccessfulProducer.map {
-        case Producer(_, makeToken) => {
-
-          // Resets the looked-ahead pointer in the source.
-          // Only done in case of a successful tokenization.
-          source.back()
-
-          val range = (startPos, endPos)
-          val token = makeToken(buffer.toSeq, range)
-
-          token
-        }
       }
     }
   }

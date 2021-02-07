@@ -40,22 +40,8 @@ trait RegExps {
     /** Indicates if this regular expression accepts the empty word. */
     val acceptsEmpty: Boolean
 
-    /** Returns the rest of a regular expression after consuming a character. */
-    def derive(char: Character): RegExp = this match {
-      case EmptyStr => EmptySet
-      case EmptySet => EmptySet
-      case Singleton(value) =>
-        if (char == value) EmptyStr
-        else EmptySet
-      case Elem(predicate) =>
-        if (predicate(char)) EmptyStr
-        else EmptySet
-      case Union(left, right) => left.derive(char) | right.derive(char)
-      case Concat(first, second) =>
-        if (first.acceptsEmpty) first.derive(char) ~ second | second.derive(char)
-        else first.derive(char) ~ second
-      case Star(regExp) => regExp.derive(char) ~ this
-    }
+    /** Indicates if the regular expression is productive. */
+    val isProductive: Boolean
 
     /** Union of `this` and `that` regular expression.
       *
@@ -119,36 +105,37 @@ trait RegExps {
     /** Accepts only the empty word. */
     case object EmptyStr extends RegExp {
       override val acceptsEmpty: Boolean = true
+      override val isProductive: Boolean = true
     }
 
     /** Never accepts. */
     case object EmptySet extends RegExp {
       override val acceptsEmpty: Boolean = false
-    }
-
-    /** Accepts single character `value`. */
-    case class Singleton(value: Character) extends RegExp {
-      override val acceptsEmpty: Boolean = false
+      override val isProductive: Boolean = false
     }
 
     /** Accepts single characters that satisfy a predicate. */
     case class Elem(predicate: Character => Boolean) extends RegExp {
       override val acceptsEmpty: Boolean = false
+      override val isProductive: Boolean = true
     }
 
     /** Union of two regular expressions. */
     case class Union(left: RegExp, right: RegExp) extends RegExp {
       override val acceptsEmpty: Boolean = left.acceptsEmpty || right.acceptsEmpty
+      override val isProductive: Boolean = left.isProductive || right.isProductive
     }
 
     /** Concatenation of two regular expressions. */
     case class Concat(first: RegExp, second: RegExp) extends RegExp {
       override val acceptsEmpty: Boolean = first.acceptsEmpty && second.acceptsEmpty
+      override val isProductive: Boolean = first.isProductive && second.isProductive
     }
 
     /** Kleene star of a regular expressions. */
     case class Star(regExp: RegExp) extends RegExp {
       override val acceptsEmpty: Boolean = true
+      override val isProductive: Boolean = true
     }
   }
 
@@ -173,7 +160,7 @@ trait RegExps {
     *
     * @group combinator
     */
-  def elem(char: Character): RegExp = Singleton(char)
+  def elem(char: Character): RegExp = Elem(_ == char)
 
   /** Regular expression that accepts only the sequence of characters `chars`.
     *
