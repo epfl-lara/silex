@@ -103,8 +103,8 @@ See the package <a href="index.html" class="extype" name="silex">silex</a> for m
   <span class="kw">def</span> apply(source: Source[Character, Position]): Iterator[Token] =
     lex(source)
 }</pre><p>Additional traits can be mixed-in.
-See for instance <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a>
-for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
+See for instance <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a>
+for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
 <span class="kw">val</span> stringSource = Source.fromString(<span class="lit">"[1, 2, 3]"</span>)
 
 <span class="cmt">// Or from a file:</span>
@@ -128,7 +128,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       </span>
       
       <p class="shortcomment cmt">Contains definitions relating to regular expressions.</p><div class="fullcomment"><div class="comment cmt"><p>Contains definitions relating to regular expressions.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="silex">silex</a></dd><dt>See also</dt><dd><span class="cmt"><p>See <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a> for useful regular expressions on <code>Char</code>.</p></span></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="silex">silex</a></dd><dt>See also</dt><dd><span class="cmt"><p>See <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a> for useful regular expressions on <code>Char</code>.</p></span></dd></dl></div>
     </li><li name="silex.RegExps.RegExp" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="regexp">
       <a id="RegExp"></a><a id="RegExp:RegExp"></a>
       <span class="permalink">
@@ -435,6 +435,22 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="silex.RegExps.RegExp.Elem#hasNext" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasNext:Boolean"></a>
+      <span class="permalink">
+      <a href="../silex/RegExps$RegExp$$Elem.html#hasNext:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasNext</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Indicates if the regular expressions accepts at least a non-empty word.</p><div class="fullcomment"><div class="comment cmt"><p>Indicates if the regular expressions accepts at least a non-empty word.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.RegExps.RegExp.Elem">Elem</a> → <a href="RegExps$RegExp.html" class="extype" name="silex.RegExps.RegExp">RegExp</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">

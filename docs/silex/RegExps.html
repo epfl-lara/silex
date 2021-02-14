@@ -103,8 +103,8 @@ See the package <a href="index.html" class="extype" name="silex">silex</a> for m
   <span class="kw">def</span> apply(source: Source[Character, Position]): Iterator[Token] =
     lex(source)
 }</pre><p>Additional traits can be mixed-in.
-See for instance <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a>
-for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
+See for instance <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a>
+for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
 <span class="kw">val</span> stringSource = Source.fromString(<span class="lit">"[1, 2, 3]"</span>)
 
 <span class="cmt">// Or from a file:</span>
@@ -130,20 +130,20 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="silex">silex</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="ArraySource.html" title=""></a>
-                        <a href="ArraySource.html" title="">ArraySource</a>
+                        <a class="class" href="ArraySource.html" title="Source over an array of character."></a>
+                        <a href="ArraySource.html" title="Source over an array of character.">ArraySource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="CharRegExps.html" title="Regular expressions on Char characters."></a>
-                        <a href="CharRegExps.html" title="Regular expressions on Char characters.">CharRegExps</a>
+                        <a class="trait" href="CharLexers.html" title="Specialized lexers operating on Char characters."></a>
+                        <a href="CharLexers.html" title="Specialized lexers operating on Char characters.">CharLexers</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="IndexPositioner$.html" title="General index-based positioner."></a>
                         <a href="IndexPositioner$.html" title="General index-based positioner.">IndexPositioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="IteratorSource.html" title="Source over an iterator."></a>
-                        <a href="IteratorSource.html" title="Source over an iterator.">IteratorSource</a>
+                        <a class="class" href="IteratorSource.html" title="Source over an interator."></a>
+                        <a href="IteratorSource.html" title="Source over an interator.">IteratorSource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="Lexers.html" title="Contains definitions for lexers."></a>
@@ -158,12 +158,16 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                         <a href="Positioner.html" title="Indicates the start position and how to increment positions.">Positioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="ReaderSource.html" title="Source over a Reader."></a>
+                        <a href="ReaderSource.html" title="Source over a Reader.">ReaderSource</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="trait" href="" title="Contains definitions relating to regular expressions."></a>
                         <a href="" title="Contains definitions relating to regular expressions.">RegExps</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Source$.html" title="Builds sources."></a>
-                        <a class="trait" href="Source.html" title="Represents a sequence of characters mutably traversed over."></a>
-                        <a href="Source.html" title="Represents a sequence of characters mutably traversed over.">Source</a>
+                        <a class="trait" href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them."></a>
+                        <a href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them.">Source</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="StringPosition.html" title="Position within a string."></a>
@@ -172,6 +176,10 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                         <span class="separator"></span>
                         <a class="object" href="StringPositioner$.html" title="Positioner for silex.StringPosition."></a>
                         <a href="StringPositioner$.html" title="Positioner for silex.StringPosition.">StringPositioner</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="StringSource.html" title="Source over an array of character."></a>
+                        <a href="StringSource.html" title="Source over an array of character.">StringSource</a>
                       </li>
               </ul>
             </div>
@@ -201,7 +209,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Contains definitions relating to regular expressions.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala" target="_blank">RegExps.scala</a></dd><dt>See also</dt><dd><span class="cmt"><p>See <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a> for useful regular expressions on <code>Char</code>.</p></span></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala" target="_blank">RegExps.scala</a></dd><dt>See also</dt><dd><span class="cmt"><p>See <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a> for useful regular expressions on <code>Char</code>.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

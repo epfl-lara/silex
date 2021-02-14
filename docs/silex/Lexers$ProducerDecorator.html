@@ -103,8 +103,8 @@ See the package <a href="index.html" class="extype" name="silex">silex</a> for m
   <span class="kw">def</span> apply(source: Source[Character, Position]): Iterator[Token] =
     lex(source)
 }</pre><p>Additional traits can be mixed-in.
-See for instance <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a>
-for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
+See for instance <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a>
+for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
 <span class="kw">val</span> stringSource = Source.fromString(<span class="lit">"[1, 2, 3]"</span>)
 
 <span class="cmt">// Or from a file:</span>
@@ -629,9 +629,9 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       
       <p class="shortcomment cmt">Creates a <code>Producer</code>.</p>
     </li><li name="silex.Lexers.ProducerDecorator#|&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="|&gt;(makeToken:Seq[Lexers.this.Character]=&gt;Lexers.this.Token):Lexers.this.Producer"></a><a id="|&gt;((Seq[Lexers.Character])⇒Token):Producer"></a>
+      <a id="|&gt;(makeToken:Iterable[Lexers.this.Character]=&gt;Lexers.this.Token):Lexers.this.Producer"></a><a id="|&gt;((Iterable[Lexers.Character])⇒Token):Producer"></a>
       <span class="permalink">
-      <a href="../silex/Lexers$ProducerDecorator.html#|&gt;(makeToken:Seq[Lexers.this.Character]=&gt;Lexers.this.Token):Lexers.this.Producer" title="Permalink">
+      <a href="../silex/Lexers$ProducerDecorator.html#|&gt;(makeToken:Iterable[Lexers.this.Character]=&gt;Lexers.this.Token):Lexers.this.Producer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -640,14 +640,14 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bar$greater" class="name">|&gt;</span><span class="params">(<span name="makeToken">makeToken: (<span class="extype" name="scala.Seq">Seq</span>[<a href="Lexers.html#Character" class="extmbr" name="silex.Lexers.Character">Lexers.Character</a>]) ⇒ <a href="Lexers.html#Token" class="extmbr" name="silex.Lexers.Token">Token</a></span>)</span><span class="result">: <a href="Lexers$Producer.html" class="extype" name="silex.Lexers.Producer">Producer</a></span>
+        <span title="gt4s: $bar$greater" class="name">|&gt;</span><span class="params">(<span name="makeToken">makeToken: (<span class="extype" name="scala.Iterable">Iterable</span>[<a href="Lexers.html#Character" class="extmbr" name="silex.Lexers.Character">Lexers.Character</a>]) ⇒ <a href="Lexers.html#Token" class="extmbr" name="silex.Lexers.Token">Token</a></span>)</span><span class="result">: <a href="Lexers$Producer.html" class="extype" name="silex.Lexers.Producer">Producer</a></span>
       </span>
       
       <p class="shortcomment cmt">Creates a <code>Producer</code>.</p>
     </li><li name="silex.Lexers.ProducerDecorator#|&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="|&gt;(makeToken:(Seq[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token):Lexers.this.Producer"></a><a id="|&gt;((Seq[Lexers.Character],(Position,Position))⇒Token):Producer"></a>
+      <a id="|&gt;(makeToken:(Iterable[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token):Lexers.this.Producer"></a><a id="|&gt;((Iterable[Lexers.Character],(Position,Position))⇒Token):Producer"></a>
       <span class="permalink">
-      <a href="../silex/Lexers$ProducerDecorator.html#|&gt;(makeToken:(Seq[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token):Lexers.this.Producer" title="Permalink">
+      <a href="../silex/Lexers$ProducerDecorator.html#|&gt;(makeToken:(Iterable[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token):Lexers.this.Producer" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -656,7 +656,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bar$greater" class="name">|&gt;</span><span class="params">(<span name="makeToken">makeToken: (<span class="extype" name="scala.Seq">Seq</span>[<a href="Lexers.html#Character" class="extmbr" name="silex.Lexers.Character">Lexers.Character</a>], (<a href="Lexers.html#Position" class="extmbr" name="silex.Lexers.Position">Position</a>, <a href="Lexers.html#Position" class="extmbr" name="silex.Lexers.Position">Position</a>)) ⇒ <a href="Lexers.html#Token" class="extmbr" name="silex.Lexers.Token">Token</a></span>)</span><span class="result">: <a href="Lexers$Producer.html" class="extype" name="silex.Lexers.Producer">Producer</a></span>
+        <span title="gt4s: $bar$greater" class="name">|&gt;</span><span class="params">(<span name="makeToken">makeToken: (<span class="extype" name="scala.Iterable">Iterable</span>[<a href="Lexers.html#Character" class="extmbr" name="silex.Lexers.Character">Lexers.Character</a>], (<a href="Lexers.html#Position" class="extmbr" name="silex.Lexers.Position">Position</a>, <a href="Lexers.html#Position" class="extmbr" name="silex.Lexers.Position">Position</a>)) ⇒ <a href="Lexers.html#Token" class="extmbr" name="silex.Lexers.Token">Token</a></span>)</span><span class="result">: <a href="Lexers$Producer.html" class="extype" name="silex.Lexers.Producer">Producer</a></span>
       </span>
       
       <p class="shortcomment cmt">Creates a <code>Producer</code>.</p>

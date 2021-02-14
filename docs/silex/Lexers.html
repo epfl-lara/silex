@@ -103,8 +103,8 @@ See the package <a href="index.html" class="extype" name="silex">silex</a> for m
   <span class="kw">def</span> apply(source: Source[Character, Position]): Iterator[Token] =
     lex(source)
 }</pre><p>Additional traits can be mixed-in.
-See for instance <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a>
-for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
+See for instance <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a>
+for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
 <span class="kw">val</span> stringSource = Source.fromString(<span class="lit">"[1, 2, 3]"</span>)
 
 <span class="cmt">// Or from a file:</span>
@@ -130,20 +130,20 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="silex">silex</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="ArraySource.html" title=""></a>
-                        <a href="ArraySource.html" title="">ArraySource</a>
+                        <a class="class" href="ArraySource.html" title="Source over an array of character."></a>
+                        <a href="ArraySource.html" title="Source over an array of character.">ArraySource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="CharRegExps.html" title="Regular expressions on Char characters."></a>
-                        <a href="CharRegExps.html" title="Regular expressions on Char characters.">CharRegExps</a>
+                        <a class="trait" href="CharLexers.html" title="Specialized lexers operating on Char characters."></a>
+                        <a href="CharLexers.html" title="Specialized lexers operating on Char characters.">CharLexers</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="IndexPositioner$.html" title="General index-based positioner."></a>
                         <a href="IndexPositioner$.html" title="General index-based positioner.">IndexPositioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="IteratorSource.html" title="Source over an iterator."></a>
-                        <a href="IteratorSource.html" title="Source over an iterator.">IteratorSource</a>
+                        <a class="class" href="IteratorSource.html" title="Source over an interator."></a>
+                        <a href="IteratorSource.html" title="Source over an interator.">IteratorSource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="" title="Contains definitions for lexers."></a>
@@ -158,12 +158,16 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                         <a href="Positioner.html" title="Indicates the start position and how to increment positions.">Positioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="ReaderSource.html" title="Source over a Reader."></a>
+                        <a href="ReaderSource.html" title="Source over a Reader.">ReaderSource</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="trait" href="RegExps.html" title="Contains definitions relating to regular expressions."></a>
                         <a href="RegExps.html" title="Contains definitions relating to regular expressions.">RegExps</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Source$.html" title="Builds sources."></a>
-                        <a class="trait" href="Source.html" title="Represents a sequence of characters mutably traversed over."></a>
-                        <a href="Source.html" title="Represents a sequence of characters mutably traversed over.">Source</a>
+                        <a class="trait" href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them."></a>
+                        <a href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them.">Source</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="StringPosition.html" title="Position within a string."></a>
@@ -172,6 +176,10 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                         <span class="separator"></span>
                         <a class="object" href="StringPositioner$.html" title="Positioner for silex.StringPosition."></a>
                         <a href="StringPositioner$.html" title="Positioner for silex.StringPosition.">StringPositioner</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="StringSource.html" title="Source over an array of character."></a>
+                        <a href="StringSource.html" title="Source over an array of character.">StringSource</a>
                       </li>
               </ul>
             </div>
@@ -314,7 +322,7 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Associates a regular expression with a token generator." href="Lexers$Producer.html"><span class="name">Producer</span></a><span class="params">(<span name="regExp">regExp: <a href="#RegExpextendsAnyRef" class="extmbr" name="silex.RegExps.RegExp">Lexers.RegExp</a></span>, <span name="makeToken">makeToken: (<span class="extype" name="scala.Seq">Seq</span>[<a href="#Character" class="extmbr" name="silex.Lexers.Character">Lexers.Character</a>], (<a href="#Position" class="extmbr" name="silex.Lexers.Position">Position</a>, <a href="#Position" class="extmbr" name="silex.Lexers.Position">Position</a>)) ⇒ <a href="#Token" class="extmbr" name="silex.Lexers.Token">Token</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="Associates a regular expression with a token generator." href="Lexers$Producer.html"><span class="name">Producer</span></a><span class="params">(<span name="regExp">regExp: <a href="#RegExpextendsAnyRef" class="extmbr" name="silex.RegExps.RegExp">Lexers.RegExp</a></span>, <span name="makeToken">makeToken: <a href="#TokenMaker=(Iterable[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token" class="extmbr" name="silex.Lexers.TokenMaker">TokenMaker</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       <p class="shortcomment cmt">Associates a regular expression with a token generator.</p>
@@ -350,6 +358,22 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       </span>
       
       <p class="shortcomment cmt">Type of tokens.</p>
+    </li><li name="silex.Lexers.TokenMaker" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TokenMaker=(Iterable[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token"></a><a id="TokenMaker:TokenMaker"></a>
+      <span class="permalink">
+      <a href="../silex/Lexers.html#TokenMaker=(Iterable[Lexers.this.Character],(Lexers.this.Position,Lexers.this.Position))=&gt;Lexers.this.Token" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TokenMaker</span><span class="result alias"> = (<span class="extype" name="scala.Iterable">Iterable</span>[<a href="#Character" class="extmbr" name="silex.Lexers.Character">Character</a>], (<a href="#Position" class="extmbr" name="silex.Lexers.Position">Position</a>, <a href="#Position" class="extmbr" name="silex.Lexers.Position">Position</a>)) ⇒ <a href="#Token" class="extmbr" name="silex.Lexers.Token">Token</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Type of functions that create tokens.</p>
     </li><li name="silex.RegExps.RegExp" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="regexp">
       <a id="RegExpextendsAnyRef"></a><a id="RegExp:RegExp"></a>
       <span class="permalink">

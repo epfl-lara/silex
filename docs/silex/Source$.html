@@ -103,8 +103,8 @@ See the package <a href="index.html" class="extype" name="silex">silex</a> for m
   <span class="kw">def</span> apply(source: Source[Character, Position]): Iterator[Token] =
     lex(source)
 }</pre><p>Additional traits can be mixed-in.
-See for instance <a href="CharRegExps.html" class="extype" name="silex.CharRegExps">silex.CharRegExps</a>
-for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
+See for instance <a href="CharLexers.html" class="extype" name="silex.CharLexers">silex.CharLexers</a>
+for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The input of lexers is in a form of a data source.</p><pre><span class="cmt">// Building a source from a string:</span>
 <span class="kw">val</span> stringSource = Source.fromString(<span class="lit">"[1, 2, 3]"</span>)
 
 <span class="cmt">// Or from a file:</span>
@@ -130,20 +130,20 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="silex">silex</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="ArraySource.html" title=""></a>
-                        <a href="ArraySource.html" title="">ArraySource</a>
+                        <a class="class" href="ArraySource.html" title="Source over an array of character."></a>
+                        <a href="ArraySource.html" title="Source over an array of character.">ArraySource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="CharRegExps.html" title="Regular expressions on Char characters."></a>
-                        <a href="CharRegExps.html" title="Regular expressions on Char characters.">CharRegExps</a>
+                        <a class="trait" href="CharLexers.html" title="Specialized lexers operating on Char characters."></a>
+                        <a href="CharLexers.html" title="Specialized lexers operating on Char characters.">CharLexers</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="IndexPositioner$.html" title="General index-based positioner."></a>
                         <a href="IndexPositioner$.html" title="General index-based positioner.">IndexPositioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="IteratorSource.html" title="Source over an iterator."></a>
-                        <a href="IteratorSource.html" title="Source over an iterator.">IteratorSource</a>
+                        <a class="class" href="IteratorSource.html" title="Source over an interator."></a>
+                        <a href="IteratorSource.html" title="Source over an interator.">IteratorSource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="Lexers.html" title="Contains definitions for lexers."></a>
@@ -158,12 +158,16 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                         <a href="Positioner.html" title="Indicates the start position and how to increment positions.">Positioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="ReaderSource.html" title="Source over a Reader."></a>
+                        <a href="ReaderSource.html" title="Source over a Reader.">ReaderSource</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="trait" href="RegExps.html" title="Contains definitions relating to regular expressions."></a>
                         <a href="RegExps.html" title="Contains definitions relating to regular expressions.">RegExps</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="" title="Builds sources."></a>
-                        <a class="trait" href="Source.html" title="Represents a sequence of characters mutably traversed over."></a>
-                        <a href="Source.html" title="Represents a sequence of characters mutably traversed over.">Source</a>
+                        <a class="trait" href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them."></a>
+                        <a href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them.">Source</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="StringPosition.html" title="Position within a string."></a>
@@ -172,6 +176,10 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
                         <span class="separator"></span>
                         <a class="object" href="StringPositioner$.html" title="Positioner for silex.StringPosition."></a>
                         <a href="StringPositioner$.html" title="Positioner for silex.StringPosition.">StringPositioner</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="StringSource.html" title="Source over an array of character."></a>
+                        <a href="StringSource.html" title="Source over an array of character.">StringSource</a>
                       </li>
               </ul>
             </div>
@@ -402,10 +410,10 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="silex.Source#fromFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromFile[Position](file:java.io.File,positioner:silex.Positioner[Char,Position]):silex.Source[Char,Position]"></a><a id="fromFile[Position](File,Positioner[Char,Position]):Source[Char,Position]"></a>
+    </li><li name="silex.Source#fromArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromArray[Character,Position](array:Array[Character],positioner:silex.Positioner[Character,Position]):silex.Source[Character,Position]"></a><a id="fromArray[Character,Position](Array[Character],Positioner[Character,Position]):Source[Character,Position]"></a>
       <span class="permalink">
-      <a href="../silex/Source$.html#fromFile[Position](file:java.io.File,positioner:silex.Positioner[Char,Position]):silex.Source[Char,Position]" title="Permalink">
+      <a href="../silex/Source$.html#fromArray[Character,Position](array:Array[Character],positioner:silex.Positioner[Character,Position]):silex.Source[Character,Position]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -414,14 +422,14 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromFile</span><span class="tparams">[<span name="Position">Position</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="positioner">positioner: <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.Source.fromFile.Position">Position</span>]</span>)</span><span class="result">: <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.Source.fromFile.Position">Position</span>]</span>
+        <span class="name">fromArray</span><span class="tparams">[<span name="Character">Character</span>, <span name="Position">Position</span>]</span><span class="params">(<span name="array">array: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="silex.Source.fromArray.Character">Character</span>]</span>, <span name="positioner">positioner: <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="silex.Source.fromArray.Character">Character</span>, <span class="extype" name="silex.Source.fromArray.Position">Position</span>]</span>)</span><span class="result">: <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="silex.Source.fromArray.Character">Character</span>, <span class="extype" name="silex.Source.fromArray.Position">Position</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Builds a source from a <code>file</code> and a <code>positioner</code>.</p>
-    </li><li name="silex.Source#fromFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromFile(file:java.io.File):silex.Source[Char,silex.StringPosition]"></a><a id="fromFile(File):Source[Char,StringPosition]"></a>
+      <p class="shortcomment cmt">Builds a source from a <code>string</code> and a <code>positioner</code>.</p>
+    </li><li name="silex.Source#fromFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromFile[Position](file:String,positioner:silex.Positioner[Char,Position],charset:java.nio.charset.Charset,inMemory:Boolean):silex.Source[Char,Position]"></a><a id="fromFile[Position](String,Positioner[Char,Position],Charset,Boolean):Source[Char,Position]"></a>
       <span class="permalink">
-      <a href="../silex/Source$.html#fromFile(file:java.io.File):silex.Source[Char,silex.StringPosition]" title="Permalink">
+      <a href="../silex/Source$.html#fromFile[Position](file:String,positioner:silex.Positioner[Char,Position],charset:java.nio.charset.Charset,inMemory:Boolean):silex.Source[Char,Position]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -430,42 +438,11 @@ for regular expressions on <code>Char</code>.</p><h3>Data sources</h3><p>The inp
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromFile</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <a href="StringPosition.html" class="extype" name="silex.StringPosition">StringPosition</a>]</span>
+        <span class="name">fromFile</span><span class="tparams">[<span name="Position">Position</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="positioner">positioner: <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.Source.fromFile.Position">Position</span>]</span>, <span name="charset">charset: <span class="extype" name="java.nio.charset.Charset">Charset</span> = <span class="defval" name="java.nio.charset.Charset.defaultCharset()">...</span></span>, <span name="inMemory">inMemory: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.Source.fromFile.Position">Position</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Builds a source from a <code>file</code>.</p>
-    </li><li name="silex.Source#fromFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromFile[Position](file:String,positioner:silex.Positioner[Char,Position]):silex.Source[Char,Position]"></a><a id="fromFile[Position](String,Positioner[Char,Position]):Source[Char,Position]"></a>
-      <span class="permalink">
-      <a href="../silex/Source$.html#fromFile[Position](file:String,positioner:silex.Positioner[Char,Position]):silex.Source[Char,Position]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromFile</span><span class="tparams">[<span name="Position">Position</span>]</span><span class="params">(<span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="positioner">positioner: <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.Source.fromFile.Position">Position</span>]</span>)</span><span class="result">: <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.Source.fromFile.Position">Position</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Builds a source from a <code>file</code> and a <code>positioner</code>.</p>
-    </li><li name="silex.Source#fromFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromFile(file:String):silex.Source[Char,silex.StringPosition]"></a><a id="fromFile(String):Source[Char,StringPosition]"></a>
-      <span class="permalink">
-      <a href="../silex/Source$.html#fromFile(file:String):silex.Source[Char,silex.StringPosition]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromFile</span><span class="params">(<span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <a href="StringPosition.html" class="extype" name="silex.StringPosition">StringPosition</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Builds a source from a <code>file</code>.</p>
+      <p class="shortcomment cmt">Builds a source from a <code>file</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Builds a source from a <code>file</code>.
+</p></div><dl class="paramcmts block"><dt class="param">file</dt><dd class="cmt"><p>The path to the file.</p></dd><dt class="param">positioner</dt><dd class="cmt"><p>Generator of positions.</p></dd><dt class="param">charset</dt><dd class="cmt"><p>The file's charset, by default the default charset of the virtual machine.</p></dd><dt class="param">inMemory</dt><dd class="cmt"><p>Whether to load the entire file in memory as a string, by default <code>true</code>.</p></dd></dl></div>
     </li><li name="silex.Source#fromIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="fromIterator[Character,Position](iterator:Iterator[Character],positioner:silex.Positioner[Character,Position]):silex.Source[Character,Position]"></a><a id="fromIterator[Character,Position](Iterator[Character],Positioner[Character,Position]):Source[Character,Position]"></a>
       <span class="permalink">

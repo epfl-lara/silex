@@ -158,16 +158,16 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
                         <a href="Positioner.html" title="Indicates the start position and how to increment positions.">Positioner</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="ReaderSource.html" title="Source over a Reader."></a>
-                        <a href="ReaderSource.html" title="Source over a Reader.">ReaderSource</a>
+                        <a class="class" href="" title="Source over a Reader."></a>
+                        <a href="" title="Source over a Reader.">ReaderSource</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="RegExps.html" title="Contains definitions relating to regular expressions."></a>
                         <a href="RegExps.html" title="Contains definitions relating to regular expressions.">RegExps</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Source$.html" title="Builds sources."></a>
-                        <a class="trait" href="" title="Represents iterators with Positions and ability to mark points and reset to them."></a>
-                        <a href="" title="Represents iterators with Positions and ability to mark points and reset to them.">Source</a>
+                        <a class="trait" href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them."></a>
+                        <a href="Source.html" title="Represents iterators with Positions and ability to mark points and reset to them.">Source</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="StringPosition.html" title="Position within a string."></a>
@@ -185,43 +185,35 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
             </div>
           </div>
           <div id="content">
-            <body class="trait type">
+            <body class="class type">
       <div id="definition">
-        <a href="Source$.html" title="See companion object"><div class="big-circle trait-companion-object">t</div></a>
+        <div class="big-circle class">c</div>
         <p id="owner"><a href="index.html" class="extype" name="silex">silex</a></p>
-        <h1><a href="Source$.html" title="See companion object">Source</a><span class="permalink">
-      <a href="../silex/Source.html" title="Permalink">
+        <h1>ReaderSource<span class="permalink">
+      <a href="../silex/ReaderSource.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"><div>
-            Companion <a href="Source$.html" title="See companion object">object Source</a>
-          </div></span></h3>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Source</span><span class="tparams">[<span name="Character">Character</span>, <span name="Position">Position</span>]</span><span class="result"> extends <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">ReaderSource</span><span class="tparams">[<span name="Position">Position</span>]</span><span class="result"> extends <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.ReaderSource.Position">Position</span>]</span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents iterators with <code>Position</code>s and ability to <code>mark</code> points and <code>reset</code> to them.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Sources.scala" target="_blank">Sources.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Source over a <code>Reader</code>.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Sources.scala" target="_blank">Sources.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="scala.collection.TraversableOnce">TraversableOnce</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">
-              Known Subclasses
-            </span>
-            <div class="subClasses hiddenContent"><a href="ArraySource.html" class="extype" name="silex.ArraySource">ArraySource</a>, <a href="IteratorSource.html" class="extype" name="silex.IteratorSource">IteratorSource</a>, <a href="ReaderSource.html" class="extype" name="silex.ReaderSource">ReaderSource</a>, <a href="StringSource.html" class="extype" name="silex.StringSource">StringSource</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.ReaderSource.Position">Position</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="scala.collection.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -246,7 +238,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="silex.Source"><span>Source</span></li><li class="in" name="scala.collection.Iterator"><span>Iterator</span></li><li class="in" name="scala.collection.TraversableOnce"><span>TraversableOnce</span></li><li class="in" name="scala.collection.GenTraversableOnce"><span>GenTraversableOnce</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="silex.ReaderSource"><span>ReaderSource</span></li><li class="in" name="silex.Source"><span>Source</span></li><li class="in" name="scala.collection.Iterator"><span>Iterator</span></li><li class="in" name="scala.collection.TraversableOnce"><span>TraversableOnce</span></li><li class="in" name="scala.collection.GenTraversableOnce"><span>GenTraversableOnce</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -264,14 +256,33 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="silex.ReaderSource#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(reader:java.io.Reader,positioner:silex.Positioner[Char,Position],markLimit:Int):silex.ReaderSource[Position]"></a><a id="&lt;init&gt;:ReaderSource[Position]"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#&lt;init&gt;(reader:java.io.Reader,positioner:silex.Positioner[Char,Position],markLimit:Int):silex.ReaderSource[Position]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ReaderSource</span><span class="params">(<span name="reader">reader: <span class="extype" name="java.io.Reader">Reader</span></span>, <span name="positioner">positioner: <a href="Positioner.html" class="extype" name="silex.Positioner">Positioner</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.ReaderSource.Position">Position</span>]</span>, <span name="markLimit">markLimit: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1024</span></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="scala.collection.Iterator.GroupedIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]"></a><a id="GroupedIterator[B&gt;:A]:GroupedIterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]" title="Permalink">
+      <a href="../silex/ReaderSource.html#GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -287,114 +298,15 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li></ol>
             </div>
 
-        <div class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="silex.Source#commit" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="commit():(Position,Iterable[Character],Position)"></a>
-      <span class="permalink">
-      <a href="../silex/Source.html#commit():(Position,Iterable[Character],Position)" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">commit</span><span class="params">()</span><span class="result">: (<span class="extype" name="silex.Source.Position">Position</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="silex.Source.Position">Position</span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Returns the all marked content since last commit.</p>
-    </li><li name="silex.Source#currentPosition" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="currentPosition:Position"></a>
-      <span class="permalink">
-      <a href="../silex/Source.html#currentPosition:Position" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">currentPosition</span><span class="result">: <span class="extype" name="silex.Source.Position">Position</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Current position.</p>
-    </li><li name="scala.collection.Iterator#hasNext" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="hasNext:Boolean"></a>
-      <span class="permalink">
-      <a href="../silex/Source.html#hasNext:Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hasNext</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
-    </li><li name="silex.Source#mark" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="mark():Unit"></a>
-      <span class="permalink">
-      <a href="../silex/Source.html#mark():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mark</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Marks the current point.</p>
-    </li><li name="scala.collection.Iterator#next" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="next():A"></a><a id="next():Character"></a>
-      <span class="permalink">
-      <a href="../silex/Source.html#next():A" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">next</span><span class="params">()</span><span class="result">: <span class="extype" name="silex.Source.Character">Character</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
-    </li><li name="silex.Source#reset" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="reset():Unit"></a>
-      <span class="permalink">
-      <a href="../silex/Source.html#reset():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">reset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Reset to the last marked point.</p>
-    </li></ol>
-            </div>
+        
 
         <div class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -410,7 +322,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html###():Int" title="Permalink">
+      <a href="../silex/ReaderSource.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -424,9 +336,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.collection.Iterator#++" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="++[B&gt;:A](that:=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]"></a><a id="++[B&gt;:Character](⇒GenTraversableOnce[B]):Iterator[B]"></a>
+      <a id="++[B&gt;:A](that:=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]"></a><a id="++[B&gt;:Char](⇒GenTraversableOnce[B]):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#++[B&gt;:A](that:=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#++[B&gt;:A](that:=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -435,14 +347,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $plus$plus" class="name">++</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="that">that: ⇒ <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.collection.Iterator.++.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.++.B">B</span>]</span>
+        <span title="gt4s: $plus$plus" class="name">++</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="that">that: ⇒ <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.collection.Iterator.++.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.++.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -458,7 +370,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.TraversableOnce#addString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addString(b:StringBuilder):StringBuilder"></a><a id="addString(StringBuilder):StringBuilder"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#addString(b:StringBuilder):StringBuilder" title="Permalink">
+      <a href="../silex/ReaderSource.html#addString(b:StringBuilder):StringBuilder" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -474,7 +386,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.TraversableOnce#addString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addString(b:StringBuilder,sep:String):StringBuilder"></a><a id="addString(StringBuilder,String):StringBuilder"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#addString(b:StringBuilder,sep:String):StringBuilder" title="Permalink">
+      <a href="../silex/ReaderSource.html#addString(b:StringBuilder,sep:String):StringBuilder" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -490,7 +402,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.TraversableOnce#addString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addString(b:StringBuilder,start:String,sep:String,end:String):StringBuilder"></a><a id="addString(StringBuilder,String,String,String):StringBuilder"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#addString(b:StringBuilder,start:String,sep:String,end:String):StringBuilder" title="Permalink">
+      <a href="../silex/ReaderSource.html#addString(b:StringBuilder,start:String,sep:String,end:String):StringBuilder" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -504,9 +416,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#aggregate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aggregate[B](z:=&gt;B)(seqop:(B,A)=&gt;B,combop:(B,B)=&gt;B):B"></a><a id="aggregate[B](⇒B)((B,Character)⇒B,(B,B)⇒B):B"></a>
+      <a id="aggregate[B](z:=&gt;B)(seqop:(B,A)=&gt;B,combop:(B,B)=&gt;B):B"></a><a id="aggregate[B](⇒B)((B,Char)⇒B,(B,B)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#aggregate[B](z:=&gt;B)(seqop:(B,A)=&gt;B,combop:(B,B)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#aggregate[B](z:=&gt;B)(seqop:(B,A)=&gt;B,combop:(B,B)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -515,14 +427,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">aggregate</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: ⇒ <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>)</span><span class="params">(<span name="seqop">seqop: (<span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span>, <span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>, <span name="combop">combop: (<span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span>, <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>
+        <span class="name">aggregate</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: ⇒ <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>)</span><span class="params">(<span name="seqop">seqop: (<span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span>, <span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>, <span name="combop">combop: (<span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span>, <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.aggregate.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../silex/ReaderSource.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -536,9 +448,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="scala.collection.Iterator#buffered" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="buffered:scala.collection.BufferedIterator[A]"></a><a id="buffered:BufferedIterator[Character]"></a>
+      <a id="buffered:scala.collection.BufferedIterator[A]"></a><a id="buffered:BufferedIterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#buffered:scala.collection.BufferedIterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#buffered:scala.collection.BufferedIterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -547,14 +459,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buffered</span><span class="result">: <span class="extype" name="scala.collection.BufferedIterator">BufferedIterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">buffered</span><span class="result">: <span class="extype" name="scala.collection.BufferedIterator">BufferedIterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#clone():Object" title="Permalink">
+      <a href="../silex/ReaderSource.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -575,10 +487,10 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="silex.Source#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="silex.ReaderSource#close" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="close():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#close():Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#close():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -590,11 +502,11 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Closes the source.</p>
+      <p class="shortcomment cmt">Closes the source.</p><div class="fullcomment"><div class="comment cmt"><p>Closes the source.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
     </li><li name="scala.collection.Iterator#collect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="collect[B](pf:PartialFunction[A,B]):Iterator[B]"></a><a id="collect[B](PartialFunction[Character,B]):Iterator[B]"></a>
+      <a id="collect[B](pf:PartialFunction[A,B]):Iterator[B]"></a><a id="collect[B](PartialFunction[Char,B]):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#collect[B](pf:PartialFunction[A,B]):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#collect[B](pf:PartialFunction[A,B]):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -603,7 +515,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">collect</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.Iterator.collect.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.collect.B">B</span>]</span>
+        <span class="name">collect</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.Iterator.collect.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.collect.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd><dt>Annotations</dt><dd>
@@ -611,9 +523,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
               
         </dd><dt>Migration</dt><dd class="cmt"><p><i>(Changed in version 2.8.0)</i> <code>collect</code> has changed. The previous behavior can be reproduced with <code>toSeq</code>.</p></dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#collectFirst" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="collectFirst[B](pf:PartialFunction[A,B]):Option[B]"></a><a id="collectFirst[B](PartialFunction[Character,B]):Option[B]"></a>
+      <a id="collectFirst[B](pf:PartialFunction[A,B]):Option[B]"></a><a id="collectFirst[B](PartialFunction[Char,B]):Option[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#collectFirst[B](pf:PartialFunction[A,B]):Option[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#collectFirst[B](pf:PartialFunction[A,B]):Option[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -622,14 +534,30 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">collectFirst</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.TraversableOnce.collectFirst.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.collectFirst.B">B</span>]</span>
+        <span class="name">collectFirst</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="pf">pf: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.TraversableOnce.collectFirst.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.collectFirst.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
+    </li><li name="silex.ReaderSource#commit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="commit():(Position,Iterable[Char],Position)"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#commit():(Position,Iterable[Char],Position)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">commit</span><span class="params">()</span><span class="result">: (<span class="extype" name="silex.ReaderSource.Position">Position</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="silex.ReaderSource.Position">Position</span>)</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the all marked content since last commit.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the all marked content since last commit.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
     </li><li name="scala.collection.Iterator#contains" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="contains(elem:Any):Boolean"></a><a id="contains(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#contains(elem:Any):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#contains(elem:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -643,9 +571,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#copyToArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copyToArray[B&gt;:A](xs:Array[B],start:Int,len:Int):Unit"></a><a id="copyToArray[B&gt;:Character](Array[B],Int,Int):Unit"></a>
+      <a id="copyToArray[B&gt;:A](xs:Array[B],start:Int,len:Int):Unit"></a><a id="copyToArray[B&gt;:Char](Array[B],Int,Int):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#copyToArray[B&gt;:A](xs:Array[B],start:Int,len:Int):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#copyToArray[B&gt;:A](xs:Array[B],start:Int,len:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -654,14 +582,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copyToArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.Iterator.copyToArray.B">B</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="len">len: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">copyToArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.Iterator.copyToArray.B">B</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="len">len: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#copyToArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copyToArray[B&gt;:A](xs:Array[B]):Unit"></a><a id="copyToArray[B&gt;:Character](Array[B]):Unit"></a>
+      <a id="copyToArray[B&gt;:A](xs:Array[B]):Unit"></a><a id="copyToArray[B&gt;:Char](Array[B]):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#copyToArray[B&gt;:A](xs:Array[B]):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#copyToArray[B&gt;:A](xs:Array[B]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -670,14 +598,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copyToArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.TraversableOnce.copyToArray.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">copyToArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.TraversableOnce.copyToArray.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#copyToArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copyToArray[B&gt;:A](xs:Array[B],start:Int):Unit"></a><a id="copyToArray[B&gt;:Character](Array[B],Int):Unit"></a>
+      <a id="copyToArray[B&gt;:A](xs:Array[B],start:Int):Unit"></a><a id="copyToArray[B&gt;:Char](Array[B],Int):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#copyToArray[B&gt;:A](xs:Array[B],start:Int):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#copyToArray[B&gt;:A](xs:Array[B],start:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -686,14 +614,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copyToArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.TraversableOnce.copyToArray.B">B</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">copyToArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.TraversableOnce.copyToArray.B">B</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#copyToBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copyToBuffer[B&gt;:A](dest:scala.collection.mutable.Buffer[B]):Unit"></a><a id="copyToBuffer[B&gt;:Character](Buffer[B]):Unit"></a>
+      <a id="copyToBuffer[B&gt;:A](dest:scala.collection.mutable.Buffer[B]):Unit"></a><a id="copyToBuffer[B&gt;:Char](Buffer[B]):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#copyToBuffer[B&gt;:A](dest:scala.collection.mutable.Buffer[B]):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#copyToBuffer[B&gt;:A](dest:scala.collection.mutable.Buffer[B]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -702,14 +630,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copyToBuffer</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="dest">dest: <span class="extype" name="scala.collection.mutable.Buffer">Buffer</span>[<span class="extype" name="scala.collection.TraversableOnce.copyToBuffer.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">copyToBuffer</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="dest">dest: <span class="extype" name="scala.collection.mutable.Buffer">Buffer</span>[<span class="extype" name="scala.collection.TraversableOnce.copyToBuffer.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#corresponds" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="corresponds[B](that:scala.collection.GenTraversableOnce[B])(p:(A,B)=&gt;Boolean):Boolean"></a><a id="corresponds[B](GenTraversableOnce[B])((Character,B)⇒Boolean):Boolean"></a>
+      <a id="corresponds[B](that:scala.collection.GenTraversableOnce[B])(p:(A,B)=&gt;Boolean):Boolean"></a><a id="corresponds[B](GenTraversableOnce[B])((Char,B)⇒Boolean):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#corresponds[B](that:scala.collection.GenTraversableOnce[B])(p:(A,B)=&gt;Boolean):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#corresponds[B](that:scala.collection.GenTraversableOnce[B])(p:(A,B)=&gt;Boolean):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -718,14 +646,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">corresponds</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.collection.Iterator.corresponds.B">B</span>]</span>)</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.Iterator.corresponds.B">B</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">corresponds</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.collection.Iterator.corresponds.B">B</span>]</span>)</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.Iterator.corresponds.B">B</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#count" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="count(p:A=&gt;Boolean):Int"></a><a id="count((Character)⇒Boolean):Int"></a>
+      <a id="count(p:A=&gt;Boolean):Int"></a><a id="count((Char)⇒Boolean):Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#count(p:A=&gt;Boolean):Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#count(p:A=&gt;Boolean):Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -734,14 +662,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">count</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">count</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
-    </li><li name="scala.collection.Iterator#drop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="drop(n:Int):Iterator[A]"></a><a id="drop(Int):Iterator[Character]"></a>
+    </li><li name="silex.ReaderSource#currentPosition" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentPosition:Position"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#drop(n:Int):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#currentPosition:Position" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -750,14 +678,30 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">drop</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">currentPosition</span><span class="result">: <span class="extype" name="silex.ReaderSource.Position">Position</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Current position.</p><div class="fullcomment"><div class="comment cmt"><p>Current position.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
+    </li><li name="scala.collection.Iterator#drop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drop(n:Int):Iterator[A]"></a><a id="drop(Int):Iterator[Char]"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#drop(n:Int):Iterator[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drop</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#dropWhile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dropWhile(p:A=&gt;Boolean):Iterator[A]"></a><a id="dropWhile((Character)⇒Boolean):Iterator[Character]"></a>
+      <a id="dropWhile(p:A=&gt;Boolean):Iterator[A]"></a><a id="dropWhile((Char)⇒Boolean):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#dropWhile(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#dropWhile(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -766,14 +710,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dropWhile</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">dropWhile</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#duplicate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="duplicate:(Iterator[A],Iterator[A])"></a><a id="duplicate:(Iterator[Character],Iterator[Character])"></a>
+      <a id="duplicate:(Iterator[A],Iterator[A])"></a><a id="duplicate:(Iterator[Char],Iterator[Char])"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#duplicate:(Iterator[A],Iterator[A])" title="Permalink">
+      <a href="../silex/ReaderSource.html#duplicate:(Iterator[A],Iterator[A])" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -782,14 +726,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">duplicate</span><span class="result">: (<span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>])</span>
+        <span class="name">duplicate</span><span class="result">: (<span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>])</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -805,7 +749,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -819,9 +763,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.collection.Iterator#exists" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="exists(p:A=&gt;Boolean):Boolean"></a><a id="exists((Character)⇒Boolean):Boolean"></a>
+      <a id="exists(p:A=&gt;Boolean):Boolean"></a><a id="exists((Char)⇒Boolean):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#exists(p:A=&gt;Boolean):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#exists(p:A=&gt;Boolean):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -830,14 +774,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">exists</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">exists</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#filter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filter(p:A=&gt;Boolean):Iterator[A]"></a><a id="filter((Character)⇒Boolean):Iterator[Character]"></a>
+      <a id="filter(p:A=&gt;Boolean):Iterator[A]"></a><a id="filter((Char)⇒Boolean):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#filter(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#filter(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -846,14 +790,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">filter</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#filterNot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filterNot(p:A=&gt;Boolean):Iterator[A]"></a><a id="filterNot((Character)⇒Boolean):Iterator[Character]"></a>
+      <a id="filterNot(p:A=&gt;Boolean):Iterator[A]"></a><a id="filterNot((Char)⇒Boolean):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#filterNot(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#filterNot(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -862,14 +806,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">filterNot</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">filterNot</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="silex.Source#finalize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#finalize():Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -881,11 +825,11 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.Source">Source</a> → AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Source.html" class="extype" name="silex.Source">Source</a> → AnyRef</dd></dl></div>
     </li><li name="scala.collection.Iterator#find" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="find(p:A=&gt;Boolean):Option[A]"></a><a id="find((Character)⇒Boolean):Option[Character]"></a>
+      <a id="find(p:A=&gt;Boolean):Option[A]"></a><a id="find((Char)⇒Boolean):Option[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#find(p:A=&gt;Boolean):Option[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#find(p:A=&gt;Boolean):Option[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -894,14 +838,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">find</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">find</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#flatMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="flatMap[B](f:A=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]"></a><a id="flatMap[B]((Character)⇒GenTraversableOnce[B]):Iterator[B]"></a>
+      <a id="flatMap[B](f:A=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]"></a><a id="flatMap[B]((Char)⇒GenTraversableOnce[B]):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#flatMap[B](f:A=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#flatMap[B](f:A=&gt;scala.collection.GenTraversableOnce[B]):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -910,14 +854,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.collection.Iterator.flatMap.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.flatMap.B">B</span>]</span>
+        <span class="name">flatMap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.collection.Iterator.flatMap.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.flatMap.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#fold" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fold[A1&gt;:A](z:A1)(op:(A1,A1)=&gt;A1):A1"></a><a id="fold[A1&gt;:Character](A1)((A1,A1)⇒A1):A1"></a>
+      <a id="fold[A1&gt;:A](z:A1)(op:(A1,A1)=&gt;A1):A1"></a><a id="fold[A1&gt;:Char](A1)((A1,A1)⇒A1):A1"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#fold[A1&gt;:A](z:A1)(op:(A1,A1)=&gt;A1):A1" title="Permalink">
+      <a href="../silex/ReaderSource.html#fold[A1&gt;:A](z:A1)(op:(A1,A1)=&gt;A1):A1" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -926,14 +870,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fold</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span>, <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span></span>
+        <span class="name">fold</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span>, <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.fold.A1">A1</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#foldLeft" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foldLeft[B](z:B)(op:(B,A)=&gt;B):B"></a><a id="foldLeft[B](B)((B,Character)⇒B):B"></a>
+      <a id="foldLeft[B](z:B)(op:(B,A)=&gt;B):B"></a><a id="foldLeft[B](B)((B,Char)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#foldLeft[B](z:B)(op:(B,A)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#foldLeft[B](z:B)(op:(B,A)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -942,14 +886,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foldLeft</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span>, <span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span></span>
+        <span class="name">foldLeft</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span>, <span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.foldLeft.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#foldRight" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foldRight[B](z:B)(op:(A,B)=&gt;B):B"></a><a id="foldRight[B](B)((Character,B)⇒B):B"></a>
+      <a id="foldRight[B](z:B)(op:(A,B)=&gt;B):B"></a><a id="foldRight[B](B)((Char,B)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#foldRight[B](z:B)(op:(A,B)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#foldRight[B](z:B)(op:(A,B)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -958,14 +902,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foldRight</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span></span>
+        <span class="name">foldRight</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.foldRight.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#forall" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="forall(p:A=&gt;Boolean):Boolean"></a><a id="forall((Character)⇒Boolean):Boolean"></a>
+      <a id="forall(p:A=&gt;Boolean):Boolean"></a><a id="forall((Char)⇒Boolean):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#forall(p:A=&gt;Boolean):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#forall(p:A=&gt;Boolean):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -974,14 +918,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">forall</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">forall</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#foreach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreach[U](f:A=&gt;U):Unit"></a><a id="foreach[U]((Character)⇒U):Unit"></a>
+      <a id="foreach[U](f:A=&gt;U):Unit"></a><a id="foreach[U]((Char)⇒U):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#foreach[U](f:A=&gt;U):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#foreach[U](f:A=&gt;U):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -990,14 +934,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.Iterator.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.Iterator.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#getClass():Class[_]" title="Permalink">
+      <a href="../silex/ReaderSource.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1014,9 +958,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
               
         </dd></dl></div>
     </li><li name="scala.collection.Iterator#grouped" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="grouped[B&gt;:A](size:Int):Iterator.this.GroupedIterator[B]"></a><a id="grouped[B&gt;:Character](Int):GroupedIterator[B]"></a>
+      <a id="grouped[B&gt;:A](size:Int):Iterator.this.GroupedIterator[B]"></a><a id="grouped[B&gt;:Char](Int):GroupedIterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#grouped[B&gt;:A](size:Int):Iterator.this.GroupedIterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#grouped[B&gt;:A](size:Int):Iterator.this.GroupedIterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1025,14 +969,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">grouped</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="#GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]" class="extmbr" name="silex.Source.GroupedIterator">GroupedIterator</a>[<span class="extype" name="scala.collection.Iterator.grouped.B">B</span>]</span>
+        <span class="name">grouped</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="#GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]" class="extmbr" name="silex.ReaderSource.GroupedIterator">GroupedIterator</a>[<span class="extype" name="scala.collection.Iterator.grouped.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#hasDefiniteSize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasDefiniteSize:Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#hasDefiniteSize:Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#hasDefiniteSize:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1045,10 +989,26 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
+    </li><li name="silex.ReaderSource#hasNext" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasNext:Boolean"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#hasNext:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasNext</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → Iterator</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#hashCode():Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1065,9 +1025,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
               
         </dd></dl></div>
     </li><li name="scala.collection.Iterator#indexOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="indexOf[B&gt;:A](elem:B,from:Int):Int"></a><a id="indexOf[B&gt;:Character](B,Int):Int"></a>
+      <a id="indexOf[B&gt;:A](elem:B,from:Int):Int"></a><a id="indexOf[B&gt;:Char](B,Int):Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#indexOf[B&gt;:A](elem:B,from:Int):Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#indexOf[B&gt;:A](elem:B,from:Int):Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1076,14 +1036,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">indexOf</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="elem">elem: <span class="extype" name="scala.collection.Iterator.indexOf.B">B</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">indexOf</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="elem">elem: <span class="extype" name="scala.collection.Iterator.indexOf.B">B</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#indexOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="indexOf[B&gt;:A](elem:B):Int"></a><a id="indexOf[B&gt;:Character](B):Int"></a>
+      <a id="indexOf[B&gt;:A](elem:B):Int"></a><a id="indexOf[B&gt;:Char](B):Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#indexOf[B&gt;:A](elem:B):Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#indexOf[B&gt;:A](elem:B):Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1092,14 +1052,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">indexOf</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="elem">elem: <span class="extype" name="scala.collection.Iterator.indexOf.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">indexOf</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="elem">elem: <span class="extype" name="scala.collection.Iterator.indexOf.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#indexWhere" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="indexWhere(p:A=&gt;Boolean,from:Int):Int"></a><a id="indexWhere((Character)⇒Boolean,Int):Int"></a>
+      <a id="indexWhere(p:A=&gt;Boolean,from:Int):Int"></a><a id="indexWhere((Char)⇒Boolean,Int):Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#indexWhere(p:A=&gt;Boolean,from:Int):Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#indexWhere(p:A=&gt;Boolean,from:Int):Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1108,14 +1068,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">indexWhere</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">indexWhere</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#indexWhere" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="indexWhere(p:A=&gt;Boolean):Int"></a><a id="indexWhere((Character)⇒Boolean):Int"></a>
+      <a id="indexWhere(p:A=&gt;Boolean):Int"></a><a id="indexWhere((Char)⇒Boolean):Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#indexWhere(p:A=&gt;Boolean):Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#indexWhere(p:A=&gt;Boolean):Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1124,14 +1084,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">indexWhere</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">indexWhere</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#isEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isEmpty:Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#isEmpty:Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#isEmpty:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1147,7 +1107,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1163,7 +1123,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.Iterator#isTraversableAgain" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isTraversableAgain:Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#isTraversableAgain:Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#isTraversableAgain:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1179,7 +1139,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.Iterator#length" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="length:Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#length:Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#length:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1193,9 +1153,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#map" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="map[B](f:A=&gt;B):Iterator[B]"></a><a id="map[B]((Character)⇒B):Iterator[B]"></a>
+      <a id="map[B](f:A=&gt;B):Iterator[B]"></a><a id="map[B]((Char)⇒B):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#map[B](f:A=&gt;B):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#map[B](f:A=&gt;B):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1204,14 +1164,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.Iterator.map.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.map.B">B</span>]</span>
+        <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.Iterator.map.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.map.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
-    </li><li name="scala.collection.TraversableOnce#max" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="max[B&gt;:A](implicitcmp:Ordering[B]):A"></a><a id="max[B&gt;:Character](Ordering[B]):Character"></a>
+    </li><li name="silex.ReaderSource#mark" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mark():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#max[B&gt;:A](implicitcmp:Ordering[B]):A" title="Permalink">
+      <a href="../silex/ReaderSource.html#mark():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1220,14 +1180,30 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">max</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.max.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="silex.Source.Character">Character</span></span>
+        <span class="name">mark</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Marks the current point.</p><div class="fullcomment"><div class="comment cmt"><p>Marks the current point.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
+    </li><li name="scala.collection.TraversableOnce#max" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="max[B&gt;:A](implicitcmp:Ordering[B]):A"></a><a id="max[B&gt;:Char](Ordering[B]):Char"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#max[B&gt;:A](implicitcmp:Ordering[B]):A" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">max</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.max.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#maxBy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="maxBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A"></a><a id="maxBy[B]((Character)⇒B)(Ordering[B]):Character"></a>
+      <a id="maxBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A"></a><a id="maxBy[B]((Char)⇒B)(Ordering[B]):Char"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#maxBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A" title="Permalink">
+      <a href="../silex/ReaderSource.html#maxBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1236,14 +1212,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">maxBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="silex.Source.Character">Character</span></span>
+        <span class="name">maxBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#min" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="min[B&gt;:A](implicitcmp:Ordering[B]):A"></a><a id="min[B&gt;:Character](Ordering[B]):Character"></a>
+      <a id="min[B&gt;:A](implicitcmp:Ordering[B]):A"></a><a id="min[B&gt;:Char](Ordering[B]):Char"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#min[B&gt;:A](implicitcmp:Ordering[B]):A" title="Permalink">
+      <a href="../silex/ReaderSource.html#min[B&gt;:A](implicitcmp:Ordering[B]):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1252,14 +1228,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">min</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.min.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="silex.Source.Character">Character</span></span>
+        <span class="name">min</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.min.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#minBy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="minBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A"></a><a id="minBy[B]((Character)⇒B)(Ordering[B]):Character"></a>
+      <a id="minBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A"></a><a id="minBy[B]((Char)⇒B)(Ordering[B]):Char"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#minBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A" title="Permalink">
+      <a href="../silex/ReaderSource.html#minBy[B](f:A=&gt;B)(implicitcmp:Ordering[B]):A" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1268,14 +1244,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">minBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="silex.Source.Character">Character</span></span>
+        <span class="name">minBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#mkString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mkString:String"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#mkString:String" title="Permalink">
+      <a href="../silex/ReaderSource.html#mkString:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1291,7 +1267,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.TraversableOnce#mkString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mkString(sep:String):String"></a><a id="mkString(String):String"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#mkString(sep:String):String" title="Permalink">
+      <a href="../silex/ReaderSource.html#mkString(sep:String):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1307,7 +1283,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.TraversableOnce#mkString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mkString(start:String,sep:String,end:String):String"></a><a id="mkString(String,String,String):String"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#mkString(start:String,sep:String,end:String):String" title="Permalink">
+      <a href="../silex/ReaderSource.html#mkString(start:String,sep:String,end:String):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1323,7 +1299,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1336,10 +1312,26 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="silex.ReaderSource#next" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="next():Char"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#next():Char" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">next</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → Iterator</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#nonEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nonEmpty:Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#nonEmpty:Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#nonEmpty:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1355,7 +1347,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#notify():Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1374,7 +1366,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#notifyAll():Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1391,9 +1383,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
               
         </dd></dl></div>
     </li><li name="scala.collection.Iterator#padTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="padTo[A1&gt;:A](len:Int,elem:A1):Iterator[A1]"></a><a id="padTo[A1&gt;:Character](Int,A1):Iterator[A1]"></a>
+      <a id="padTo[A1&gt;:A](len:Int,elem:A1):Iterator[A1]"></a><a id="padTo[A1&gt;:Char](Int,A1):Iterator[A1]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#padTo[A1&gt;:A](len:Int,elem:A1):Iterator[A1]" title="Permalink">
+      <a href="../silex/ReaderSource.html#padTo[A1&gt;:A](len:Int,elem:A1):Iterator[A1]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1402,14 +1394,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">padTo</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="len">len: <span class="extype" name="scala.Int">Int</span></span>, <span name="elem">elem: <span class="extype" name="scala.collection.Iterator.padTo.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.padTo.A1">A1</span>]</span>
+        <span class="name">padTo</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="len">len: <span class="extype" name="scala.Int">Int</span></span>, <span name="elem">elem: <span class="extype" name="scala.collection.Iterator.padTo.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.padTo.A1">A1</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#partition" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="partition(p:A=&gt;Boolean):(Iterator[A],Iterator[A])"></a><a id="partition((Character)⇒Boolean):(Iterator[Character],Iterator[Character])"></a>
+      <a id="partition(p:A=&gt;Boolean):(Iterator[A],Iterator[A])"></a><a id="partition((Char)⇒Boolean):(Iterator[Char],Iterator[Char])"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#partition(p:A=&gt;Boolean):(Iterator[A],Iterator[A])" title="Permalink">
+      <a href="../silex/ReaderSource.html#partition(p:A=&gt;Boolean):(Iterator[A],Iterator[A])" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1418,14 +1410,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">partition</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: (<span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>])</span>
+        <span class="name">partition</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: (<span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>])</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#patch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="patch[B&gt;:A](from:Int,patchElems:Iterator[B],replaced:Int):Iterator[B]"></a><a id="patch[B&gt;:Character](Int,Iterator[B],Int):Iterator[B]"></a>
+      <a id="patch[B&gt;:A](from:Int,patchElems:Iterator[B],replaced:Int):Iterator[B]"></a><a id="patch[B&gt;:Char](Int,Iterator[B],Int):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#patch[B&gt;:A](from:Int,patchElems:Iterator[B],replaced:Int):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#patch[B&gt;:A](from:Int,patchElems:Iterator[B],replaced:Int):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1434,14 +1426,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">patch</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="patchElems">patchElems: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.patch.B">B</span>]</span>, <span name="replaced">replaced: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.patch.B">B</span>]</span>
+        <span class="name">patch</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="patchElems">patchElems: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.patch.B">B</span>]</span>, <span name="replaced">replaced: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.patch.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#product" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="product[B&gt;:A](implicitnum:Numeric[B]):B"></a><a id="product[B&gt;:Character](Numeric[B]):B"></a>
+      <a id="product[B&gt;:A](implicitnum:Numeric[B]):B"></a><a id="product[B&gt;:Char](Numeric[B]):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#product[B&gt;:A](implicitnum:Numeric[B]):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#product[B&gt;:A](implicitnum:Numeric[B]):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1450,14 +1442,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">product</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <span class="extype" name="scala.Numeric">Numeric</span>[<span class="extype" name="scala.collection.TraversableOnce.product.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.product.B">B</span></span>
+        <span class="name">product</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <span class="extype" name="scala.Numeric">Numeric</span>[<span class="extype" name="scala.collection.TraversableOnce.product.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.product.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#reduce" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reduce[A1&gt;:A](op:(A1,A1)=&gt;A1):A1"></a><a id="reduce[A1&gt;:Character]((A1,A1)⇒A1):A1"></a>
+      <a id="reduce[A1&gt;:A](op:(A1,A1)=&gt;A1):A1"></a><a id="reduce[A1&gt;:Char]((A1,A1)⇒A1):A1"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reduce[A1&gt;:A](op:(A1,A1)=&gt;A1):A1" title="Permalink">
+      <a href="../silex/ReaderSource.html#reduce[A1&gt;:A](op:(A1,A1)=&gt;A1):A1" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1466,14 +1458,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reduce</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span>, <span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span></span>
+        <span class="name">reduce</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span>, <span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.reduce.A1">A1</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#reduceLeft" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reduceLeft[B&gt;:A](op:(B,A)=&gt;B):B"></a><a id="reduceLeft[B&gt;:Character]((B,Character)⇒B):B"></a>
+      <a id="reduceLeft[B&gt;:A](op:(B,A)=&gt;B):B"></a><a id="reduceLeft[B&gt;:Char]((B,Char)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reduceLeft[B&gt;:A](op:(B,A)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#reduceLeft[B&gt;:A](op:(B,A)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1482,14 +1474,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reduceLeft</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduceLeft.B">B</span>, <span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceLeft.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.reduceLeft.B">B</span></span>
+        <span class="name">reduceLeft</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduceLeft.B">B</span>, <span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceLeft.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.reduceLeft.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#reduceLeftOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reduceLeftOption[B&gt;:A](op:(B,A)=&gt;B):Option[B]"></a><a id="reduceLeftOption[B&gt;:Character]((B,Character)⇒B):Option[B]"></a>
+      <a id="reduceLeftOption[B&gt;:A](op:(B,A)=&gt;B):Option[B]"></a><a id="reduceLeftOption[B&gt;:Char]((B,Char)⇒B):Option[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reduceLeftOption[B&gt;:A](op:(B,A)=&gt;B):Option[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#reduceLeftOption[B&gt;:A](op:(B,A)=&gt;B):Option[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1498,14 +1490,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reduceLeftOption</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduceLeftOption.B">B</span>, <span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceLeftOption.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.reduceLeftOption.B">B</span>]</span>
+        <span class="name">reduceLeftOption</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduceLeftOption.B">B</span>, <span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceLeftOption.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.reduceLeftOption.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#reduceOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reduceOption[A1&gt;:A](op:(A1,A1)=&gt;A1):Option[A1]"></a><a id="reduceOption[A1&gt;:Character]((A1,A1)⇒A1):Option[A1]"></a>
+      <a id="reduceOption[A1&gt;:A](op:(A1,A1)=&gt;A1):Option[A1]"></a><a id="reduceOption[A1&gt;:Char]((A1,A1)⇒A1):Option[A1]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reduceOption[A1&gt;:A](op:(A1,A1)=&gt;A1):Option[A1]" title="Permalink">
+      <a href="../silex/ReaderSource.html#reduceOption[A1&gt;:A](op:(A1,A1)=&gt;A1):Option[A1]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1514,14 +1506,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reduceOption</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span>, <span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span>]</span>
+        <span class="name">reduceOption</span><span class="tparams">[<span name="A1">A1 &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span>, <span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.reduceOption.A1">A1</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#reduceRight" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reduceRight[B&gt;:A](op:(A,B)=&gt;B):B"></a><a id="reduceRight[B&gt;:Character]((Character,B)⇒B):B"></a>
+      <a id="reduceRight[B&gt;:A](op:(A,B)=&gt;B):B"></a><a id="reduceRight[B&gt;:Char]((Char,B)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reduceRight[B&gt;:A](op:(A,B)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#reduceRight[B&gt;:A](op:(A,B)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1530,14 +1522,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reduceRight</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.TraversableOnce.reduceRight.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceRight.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.reduceRight.B">B</span></span>
+        <span class="name">reduceRight</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.TraversableOnce.reduceRight.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceRight.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.reduceRight.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#reduceRightOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reduceRightOption[B&gt;:A](op:(A,B)=&gt;B):Option[B]"></a><a id="reduceRightOption[B&gt;:Character]((Character,B)⇒B):Option[B]"></a>
+      <a id="reduceRightOption[B&gt;:A](op:(A,B)=&gt;B):Option[B]"></a><a id="reduceRightOption[B&gt;:Char]((Char,B)⇒B):Option[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reduceRightOption[B&gt;:A](op:(A,B)=&gt;B):Option[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#reduceRightOption[B&gt;:A](op:(A,B)=&gt;B):Option[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1546,14 +1538,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reduceRightOption</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.TraversableOnce.reduceRightOption.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceRightOption.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.reduceRightOption.B">B</span>]</span>
+        <span class="name">reduceRightOption</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.TraversableOnce.reduceRightOption.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.reduceRightOption.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.collection.TraversableOnce.reduceRightOption.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
-    </li><li name="scala.collection.TraversableOnce#reversed" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reversed:List[A]"></a><a id="reversed:List[Character]"></a>
+    </li><li name="silex.ReaderSource#reset" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reset():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#reversed:List[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#reset():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1562,14 +1554,30 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reversed</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">reset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Reset to the last marked point.</p><div class="fullcomment"><div class="comment cmt"><p>Reset to the last marked point.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="silex.ReaderSource">ReaderSource</a> → <a href="Source.html" class="extype" name="silex.Source">Source</a></dd></dl></div>
+    </li><li name="scala.collection.TraversableOnce#reversed" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reversed:List[A]"></a><a id="reversed:List[Char]"></a>
+      <span class="permalink">
+      <a href="../silex/ReaderSource.html#reversed:List[A]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reversed</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#sameElements" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sameElements(that:Iterator[_]):Boolean"></a><a id="sameElements(Iterator[_]):Boolean"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#sameElements(that:Iterator[_]):Boolean" title="Permalink">
+      <a href="../silex/ReaderSource.html#sameElements(that:Iterator[_]):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1583,9 +1591,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#scanLeft" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="scanLeft[B](z:B)(op:(B,A)=&gt;B):Iterator[B]"></a><a id="scanLeft[B](B)((B,Character)⇒B):Iterator[B]"></a>
+      <a id="scanLeft[B](z:B)(op:(B,A)=&gt;B):Iterator[B]"></a><a id="scanLeft[B](B)((B,Char)⇒B):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#scanLeft[B](z:B)(op:(B,A)=&gt;B):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#scanLeft[B](z:B)(op:(B,A)=&gt;B):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1594,14 +1602,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">scanLeft</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span>, <span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span>]</span>
+        <span class="name">scanLeft</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span>, <span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.scanLeft.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#scanRight" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="scanRight[B](z:B)(op:(A,B)=&gt;B):Iterator[B]"></a><a id="scanRight[B](B)((Character,B)⇒B):Iterator[B]"></a>
+      <a id="scanRight[B](z:B)(op:(A,B)=&gt;B):Iterator[B]"></a><a id="scanRight[B](B)((Char,B)⇒B):Iterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#scanRight[B](z:B)(op:(A,B)=&gt;B):Iterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#scanRight[B](z:B)(op:(A,B)=&gt;B):Iterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1610,14 +1618,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">scanRight</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.Iterator.scanRight.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.Iterator.scanRight.B">B</span>) ⇒ <span class="extype" name="scala.collection.Iterator.scanRight.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.scanRight.B">B</span>]</span>
+        <span class="name">scanRight</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.Iterator.scanRight.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.Iterator.scanRight.B">B</span>) ⇒ <span class="extype" name="scala.collection.Iterator.scanRight.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.scanRight.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#seq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="seq:Iterator[A]"></a><a id="seq:Iterator[Character]"></a>
+      <a id="seq:Iterator[A]"></a><a id="seq:Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#seq:Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#seq:Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1626,14 +1634,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">seq</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">seq</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#size" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="size:Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#size:Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#size:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1649,7 +1657,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.collection.GenTraversableOnce#sizeHintIfCheap" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sizeHintIfCheap:Int"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#sizeHintIfCheap:Int" title="Permalink">
+      <a href="../silex/ReaderSource.html#sizeHintIfCheap:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1663,9 +1671,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="scala.collection">collection</span>] </dd><dt>Definition Classes</dt><dd>GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#slice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="slice(from:Int,until:Int):Iterator[A]"></a><a id="slice(Int,Int):Iterator[Character]"></a>
+      <a id="slice(from:Int,until:Int):Iterator[A]"></a><a id="slice(Int,Int):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#slice(from:Int,until:Int):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#slice(from:Int,until:Int):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1674,14 +1682,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">slice</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="until">until: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">slice</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="until">until: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#sliceIterator" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sliceIterator(from:Int,until:Int):Iterator[A]"></a><a id="sliceIterator(Int,Int):Iterator[Character]"></a>
+      <a id="sliceIterator(from:Int,until:Int):Iterator[A]"></a><a id="sliceIterator(Int,Int):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#sliceIterator(from:Int,until:Int):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#sliceIterator(from:Int,until:Int):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1690,14 +1698,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sliceIterator</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="until">until: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">sliceIterator</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="until">until: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#sliding" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sliding[B&gt;:A](size:Int,step:Int):Iterator.this.GroupedIterator[B]"></a><a id="sliding[B&gt;:Character](Int,Int):GroupedIterator[B]"></a>
+      <a id="sliding[B&gt;:A](size:Int,step:Int):Iterator.this.GroupedIterator[B]"></a><a id="sliding[B&gt;:Char](Int,Int):GroupedIterator[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#sliding[B&gt;:A](size:Int,step:Int):Iterator.this.GroupedIterator[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#sliding[B&gt;:A](size:Int,step:Int):Iterator.this.GroupedIterator[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1706,14 +1714,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sliding</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>, <span name="step">step: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="#GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]" class="extmbr" name="silex.Source.GroupedIterator">GroupedIterator</a>[<span class="extype" name="scala.collection.Iterator.sliding.B">B</span>]</span>
+        <span class="name">sliding</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>, <span name="step">step: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="#GroupedIterator[B&gt;:A]extendsAbstractIterator[Seq[B]]withIterator[Seq[B]]" class="extmbr" name="silex.ReaderSource.GroupedIterator">GroupedIterator</a>[<span class="extype" name="scala.collection.Iterator.sliding.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#span" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="span(p:A=&gt;Boolean):(Iterator[A],Iterator[A])"></a><a id="span((Character)⇒Boolean):(Iterator[Character],Iterator[Character])"></a>
+      <a id="span(p:A=&gt;Boolean):(Iterator[A],Iterator[A])"></a><a id="span((Char)⇒Boolean):(Iterator[Char],Iterator[Char])"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#span(p:A=&gt;Boolean):(Iterator[A],Iterator[A])" title="Permalink">
+      <a href="../silex/ReaderSource.html#span(p:A=&gt;Boolean):(Iterator[A],Iterator[A])" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1722,14 +1730,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">span</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: (<span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>])</span>
+        <span class="name">span</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: (<span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>], <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>])</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#sum" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sum[B&gt;:A](implicitnum:Numeric[B]):B"></a><a id="sum[B&gt;:Character](Numeric[B]):B"></a>
+      <a id="sum[B&gt;:A](implicitnum:Numeric[B]):B"></a><a id="sum[B&gt;:Char](Numeric[B]):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#sum[B&gt;:A](implicitnum:Numeric[B]):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#sum[B&gt;:A](implicitnum:Numeric[B]):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1738,14 +1746,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sum</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <span class="extype" name="scala.Numeric">Numeric</span>[<span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span></span>
+        <span class="name">sum</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <span class="extype" name="scala.Numeric">Numeric</span>[<span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../silex/ReaderSource.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1759,9 +1767,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.collection.Iterator#take" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="take(n:Int):Iterator[A]"></a><a id="take(Int):Iterator[Character]"></a>
+      <a id="take(n:Int):Iterator[A]"></a><a id="take(Int):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#take(n:Int):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#take(n:Int):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1770,14 +1778,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">take</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">take</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#takeWhile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="takeWhile(p:A=&gt;Boolean):Iterator[A]"></a><a id="takeWhile((Character)⇒Boolean):Iterator[Character]"></a>
+      <a id="takeWhile(p:A=&gt;Boolean):Iterator[A]"></a><a id="takeWhile((Char)⇒Boolean):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#takeWhile(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#takeWhile(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1786,14 +1794,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">takeWhile</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">takeWhile</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#to" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="to[Col[_]](implicitcbf:scala.collection.generic.CanBuildFrom[Nothing,A,Col[A@scala.annotation.unchecked.uncheckedVariance]]):Col[A@scala.annotation.unchecked.uncheckedVariance]"></a><a id="to[Col[_]](CanBuildFrom[Nothing,Character,Col[Character]]):Col[Character]"></a>
+      <a id="to[Col[_]](implicitcbf:scala.collection.generic.CanBuildFrom[Nothing,A,Col[A@scala.annotation.unchecked.uncheckedVariance]]):Col[A@scala.annotation.unchecked.uncheckedVariance]"></a><a id="to[Col[_]](CanBuildFrom[Nothing,Char,Col[Char]]):Col[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#to[Col[_]](implicitcbf:scala.collection.generic.CanBuildFrom[Nothing,A,Col[A@scala.annotation.unchecked.uncheckedVariance]]):Col[A@scala.annotation.unchecked.uncheckedVariance]" title="Permalink">
+      <a href="../silex/ReaderSource.html#to[Col[_]](implicitcbf:scala.collection.generic.CanBuildFrom[Nothing,A,Col[A@scala.annotation.unchecked.uncheckedVariance]]):Col[A@scala.annotation.unchecked.uncheckedVariance]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1802,14 +1810,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">to</span><span class="tparams">[<span name="Col">Col<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cbf">cbf: <span class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</span>[<span class="extype" name="scala.Nothing">Nothing</span>, <span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.TraversableOnce.to.Col">Col</span>[<span class="extype" name="silex.Source.Character">Character</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.to.Col">Col</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">to</span><span class="tparams">[<span name="Col">Col<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cbf">cbf: <span class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</span>[<span class="extype" name="scala.Nothing">Nothing</span>, <span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.TraversableOnce.to.Col">Col</span>[<span class="extype" name="scala.Char">Char</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.to.Col">Col</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toArray[B&gt;:A](implicitevidence$1:scala.reflect.ClassTag[B]):Array[B]"></a><a id="toArray[B&gt;:Character](ClassTag[B]):Array[B]"></a>
+      <a id="toArray[B&gt;:A](implicitevidence$1:scala.reflect.ClassTag[B]):Array[B]"></a><a id="toArray[B&gt;:Char](ClassTag[B]):Array[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toArray[B&gt;:A](implicitevidence$1:scala.reflect.ClassTag[B]):Array[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toArray[B&gt;:A](implicitevidence$1:scala.reflect.ClassTag[B]):Array[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1818,14 +1826,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.collection.TraversableOnce.toArray.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.TraversableOnce.toArray.B">B</span>]</span>
+        <span class="name">toArray</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.collection.TraversableOnce.toArray.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.collection.TraversableOnce.toArray.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toBuffer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toBuffer[B&gt;:A]:scala.collection.mutable.Buffer[B]"></a><a id="toBuffer[B&gt;:Character]:Buffer[B]"></a>
+      <a id="toBuffer[B&gt;:A]:scala.collection.mutable.Buffer[B]"></a><a id="toBuffer[B&gt;:Char]:Buffer[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toBuffer[B&gt;:A]:scala.collection.mutable.Buffer[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toBuffer[B&gt;:A]:scala.collection.mutable.Buffer[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1834,14 +1842,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toBuffer</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="result">: <span class="extype" name="scala.collection.mutable.Buffer">Buffer</span>[<span class="extype" name="scala.collection.TraversableOnce.toBuffer.B">B</span>]</span>
+        <span class="name">toBuffer</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="result">: <span class="extype" name="scala.collection.mutable.Buffer">Buffer</span>[<span class="extype" name="scala.collection.TraversableOnce.toBuffer.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toIndexedSeq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toIndexedSeq:scala.collection.immutable.IndexedSeq[A]"></a><a id="toIndexedSeq:IndexedSeq[Character]"></a>
+      <a id="toIndexedSeq:scala.collection.immutable.IndexedSeq[A]"></a><a id="toIndexedSeq:IndexedSeq[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toIndexedSeq:scala.collection.immutable.IndexedSeq[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toIndexedSeq:scala.collection.immutable.IndexedSeq[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1850,14 +1858,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIndexedSeq</span><span class="result">: <span class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toIndexedSeq</span><span class="result">: <span class="extype" name="scala.collection.immutable.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toIterable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toIterable:Iterable[A]"></a><a id="toIterable:Iterable[Character]"></a>
+      <a id="toIterable:Iterable[A]"></a><a id="toIterable:Iterable[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toIterable:Iterable[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toIterable:Iterable[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1866,14 +1874,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIterable</span><span class="result">: <span class="extype" name="scala.collection.Iterable">Iterable</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toIterable</span><span class="result">: <span class="extype" name="scala.collection.Iterable">Iterable</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#toIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toIterator:Iterator[A]"></a><a id="toIterator:Iterator[Character]"></a>
+      <a id="toIterator:Iterator[A]"></a><a id="toIterator:Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toIterator:Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toIterator:Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1882,14 +1890,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIterator</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toIterator</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toList" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toList:List[A]"></a><a id="toList:List[Character]"></a>
+      <a id="toList:List[A]"></a><a id="toList:List[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toList:List[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toList:List[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1898,14 +1906,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toList</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toList</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toMap[T,U](implicitev:A&lt;:&lt;(T,U)):scala.collection.immutable.Map[T,U]"></a><a id="toMap[T,U](&lt;:&lt;[Character,(T,U)]):Map[T,U]"></a>
+      <a id="toMap[T,U](implicitev:A&lt;:&lt;(T,U)):scala.collection.immutable.Map[T,U]"></a><a id="toMap[T,U](&lt;:&lt;[Char,(T,U)]):Map[T,U]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toMap[T,U](implicitev:A&lt;:&lt;(T,U)):scala.collection.immutable.Map[T,U]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toMap[T,U](implicitev:A&lt;:&lt;(T,U)):scala.collection.immutable.Map[T,U]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1914,14 +1922,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toMap</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="silex.Source.Character">Character</span>, (<span class="extype" name="scala.collection.TraversableOnce.toMap.T">T</span>, <span class="extype" name="scala.collection.TraversableOnce.toMap.U">U</span>)]</span>)</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.collection.TraversableOnce.toMap.T">T</span>, <span class="extype" name="scala.collection.TraversableOnce.toMap.U">U</span>]</span>
+        <span class="name">toMap</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="scala.Char">Char</span>, (<span class="extype" name="scala.collection.TraversableOnce.toMap.T">T</span>, <span class="extype" name="scala.collection.TraversableOnce.toMap.U">U</span>)]</span>)</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.collection.TraversableOnce.toMap.T">T</span>, <span class="extype" name="scala.collection.TraversableOnce.toMap.U">U</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toSeq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toSeq:Seq[A]"></a><a id="toSeq:Seq[Character]"></a>
+      <a id="toSeq:Seq[A]"></a><a id="toSeq:Seq[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toSeq:Seq[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toSeq:Seq[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1930,14 +1938,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toSeq</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toSeq</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toSet[B&gt;:A]:scala.collection.immutable.Set[B]"></a><a id="toSet[B&gt;:Character]:Set[B]"></a>
+      <a id="toSet[B&gt;:A]:scala.collection.immutable.Set[B]"></a><a id="toSet[B&gt;:Char]:Set[B]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toSet[B&gt;:A]:scala.collection.immutable.Set[B]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toSet[B&gt;:A]:scala.collection.immutable.Set[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1946,14 +1954,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toSet</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>]</span><span class="result">: <span class="extype" name="scala.collection.immutable.Set">Set</span>[<span class="extype" name="scala.collection.TraversableOnce.toSet.B">B</span>]</span>
+        <span class="name">toSet</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="scala.Char">Char</span></span>]</span><span class="result">: <span class="extype" name="scala.collection.immutable.Set">Set</span>[<span class="extype" name="scala.collection.TraversableOnce.toSet.B">B</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#toStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toStream:scala.collection.immutable.Stream[A]"></a><a id="toStream:Stream[Character]"></a>
+      <a id="toStream:scala.collection.immutable.Stream[A]"></a><a id="toStream:Stream[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toStream:scala.collection.immutable.Stream[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toStream:scala.collection.immutable.Stream[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1962,14 +1970,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toStream</span><span class="result">: <span class="extype" name="scala.collection.immutable.Stream">Stream</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toStream</span><span class="result">: <span class="extype" name="scala.collection.immutable.Stream">Stream</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.Iterator#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toString():String" title="Permalink">
+      <a href="../silex/ReaderSource.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1983,9 +1991,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → AnyRef → Any</dd></dl></div>
     </li><li name="scala.collection.Iterator#toTraversable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toTraversable:Traversable[A]"></a><a id="toTraversable:Traversable[Character]"></a>
+      <a id="toTraversable:Traversable[A]"></a><a id="toTraversable:Traversable[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toTraversable:Traversable[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toTraversable:Traversable[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1994,14 +2002,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTraversable</span><span class="result">: <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toTraversable</span><span class="result">: <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#toVector" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toVector:Vector[A]"></a><a id="toVector:Vector[Character]"></a>
+      <a id="toVector:Vector[A]"></a><a id="toVector:Vector[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#toVector:Vector[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#toVector:Vector[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2010,14 +2018,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toVector</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">toVector</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#wait():Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2039,7 +2047,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2061,7 +2069,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../silex/ReaderSource.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2083,9 +2091,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
               
         </dd></dl></div>
     </li><li name="scala.collection.Iterator#withFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withFilter(p:A=&gt;Boolean):Iterator[A]"></a><a id="withFilter((Character)⇒Boolean):Iterator[Character]"></a>
+      <a id="withFilter(p:A=&gt;Boolean):Iterator[A]"></a><a id="withFilter((Char)⇒Boolean):Iterator[Char]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#withFilter(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
+      <a href="../silex/ReaderSource.html#withFilter(p:A=&gt;Boolean):Iterator[A]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2094,14 +2102,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withFilter</span><span class="params">(<span name="p">p: (<span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</span>
+        <span class="name">withFilter</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#zip" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zip[B](that:Iterator[B]):Iterator[(A,B)]"></a><a id="zip[B](Iterator[B]):Iterator[(Character,B)]"></a>
+      <a id="zip[B](that:Iterator[B]):Iterator[(A,B)]"></a><a id="zip[B](Iterator[B]):Iterator[(Char,B)]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#zip[B](that:Iterator[B]):Iterator[(A,B)]" title="Permalink">
+      <a href="../silex/ReaderSource.html#zip[B](that:Iterator[B]):Iterator[(A,B)]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2110,14 +2118,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zip</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.zip.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[(<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.Iterator.zip.B">B</span>)]</span>
+        <span class="name">zip</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="that">that: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.zip.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[(<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.Iterator.zip.B">B</span>)]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#zipAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipAll[B,A1&gt;:A,B1&gt;:B](that:Iterator[B],thisElem:A1,thatElem:B1):Iterator[(A1,B1)]"></a><a id="zipAll[B,A1&gt;:Character,B1&gt;:B](Iterator[B],A1,B1):Iterator[(A1,B1)]"></a>
+      <a id="zipAll[B,A1&gt;:A,B1&gt;:B](that:Iterator[B],thisElem:A1,thatElem:B1):Iterator[(A1,B1)]"></a><a id="zipAll[B,A1&gt;:Char,B1&gt;:B](Iterator[B],A1,B1):Iterator[(A1,B1)]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#zipAll[B,A1&gt;:A,B1&gt;:B](that:Iterator[B],thisElem:A1,thatElem:B1):Iterator[(A1,B1)]" title="Permalink">
+      <a href="../silex/ReaderSource.html#zipAll[B,A1&gt;:A,B1&gt;:B](that:Iterator[B],thisElem:A1,thatElem:B1):Iterator[(A1,B1)]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2126,14 +2134,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipAll</span><span class="tparams">[<span name="B">B</span>, <span name="A1">A1 &gt;: <span class="extype" name="silex.Source.Character">Character</span></span>, <span name="B1">B1 &gt;: <span class="extype" name="scala.collection.Iterator.zipAll.B">B</span></span>]</span><span class="params">(<span name="that">that: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.zipAll.B">B</span>]</span>, <span name="thisElem">thisElem: <span class="extype" name="scala.collection.Iterator.zipAll.A1">A1</span></span>, <span name="thatElem">thatElem: <span class="extype" name="scala.collection.Iterator.zipAll.B1">B1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[(<span class="extype" name="scala.collection.Iterator.zipAll.A1">A1</span>, <span class="extype" name="scala.collection.Iterator.zipAll.B1">B1</span>)]</span>
+        <span class="name">zipAll</span><span class="tparams">[<span name="B">B</span>, <span name="A1">A1 &gt;: <span class="extype" name="scala.Char">Char</span></span>, <span name="B1">B1 &gt;: <span class="extype" name="scala.collection.Iterator.zipAll.B">B</span></span>]</span><span class="params">(<span name="that">that: <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.collection.Iterator.zipAll.B">B</span>]</span>, <span name="thisElem">thisElem: <span class="extype" name="scala.collection.Iterator.zipAll.A1">A1</span></span>, <span name="thatElem">thatElem: <span class="extype" name="scala.collection.Iterator.zipAll.B1">B1</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[(<span class="extype" name="scala.collection.Iterator.zipAll.A1">A1</span>, <span class="extype" name="scala.collection.Iterator.zipAll.B1">B1</span>)]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
     </li><li name="scala.collection.Iterator#zipWithIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipWithIndex:Iterator[(A,Int)]"></a><a id="zipWithIndex:Iterator[(Character,Int)]"></a>
+      <a id="zipWithIndex:Iterator[(A,Int)]"></a><a id="zipWithIndex:Iterator[(Char,Int)]"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#zipWithIndex:Iterator[(A,Int)]" title="Permalink">
+      <a href="../silex/ReaderSource.html#zipWithIndex:Iterator[(A,Int)]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2142,7 +2150,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipWithIndex</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[(<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+        <span class="name">zipWithIndex</span><span class="result">: <span class="extype" name="scala.collection.Iterator">Iterator</span>[(<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
@@ -2155,9 +2163,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <div class="values members">
               <h3>Deprecated Value Members</h3>
               <ol><li name="scala.collection.TraversableOnce#/:" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="/:[B](z:B)(op:(B,A)=&gt;B):B"></a><a id="/:[B](B)((B,Character)⇒B):B"></a>
+      <a id="/:[B](z:B)(op:(B,A)=&gt;B):B"></a><a id="/:[B](B)((B,Char)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#/:[B](z:B)(op:(B,A)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#/:[B](z:B)(op:(B,A)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2166,7 +2174,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $div$colon. Deprecated: (Since version 2.12.10) Use foldLeft instead of /:" class="name deprecated">/:</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce./:.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce./:.B">B</span>, <span class="extype" name="silex.Source.Character">Character</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce./:.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce./:.B">B</span></span>
+        <span title="gt4s: $div$colon. Deprecated: (Since version 2.12.10) Use foldLeft instead of /:" class="name deprecated">/:</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce./:.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.collection.TraversableOnce./:.B">B</span>, <span class="extype" name="scala.Char">Char</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce./:.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce./:.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd><dt>Annotations</dt><dd>
@@ -2174,9 +2182,9 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.12.10)</i> Use foldLeft instead of /:</p></dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#:\" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id=":\[B](z:B)(op:(A,B)=&gt;B):B"></a><a id=":\[B](B)((Character,B)⇒B):B"></a>
+      <a id=":\[B](z:B)(op:(A,B)=&gt;B):B"></a><a id=":\[B](B)((Char,B)⇒B):B"></a>
       <span class="permalink">
-      <a href="../silex/Source.html#:\[B](z:B)(op:(A,B)=&gt;B):B" title="Permalink">
+      <a href="../silex/ReaderSource.html#:\[B](z:B)(op:(A,B)=&gt;B):B" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2185,7 +2193,7 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $colon$bslash. Deprecated: (Since version 2.12.10) Use foldRight instead of :\" class="name deprecated">:\</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="silex.Source.Character">Character</span>, <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span></span>
+        <span title="gt4s: $colon$bslash. Deprecated: (Since version 2.12.10) Use foldRight instead of :\" class="name deprecated">:\</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span></span>)</span><span class="params">(<span name="op">op: (<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.:\.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd><dt>Annotations</dt><dd>
@@ -2197,12 +2205,14 @@ for lexers specialized on <code>Char</code>.</p><h3>Data sources</h3><p>The inpu
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.collection.Iterator">
-              <h3>Inherited from <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="silex.Source.Character">Character</span>]</h3>
+        <div class="parent" name="silex.Source">
+              <h3>Inherited from <a href="Source.html" class="extype" name="silex.Source">Source</a>[<span class="extype" name="scala.Char">Char</span>, <span class="extype" name="silex.ReaderSource.Position">Position</span>]</h3>
+            </div><div class="parent" name="scala.collection.Iterator">
+              <h3>Inherited from <span class="extype" name="scala.collection.Iterator">Iterator</span>[<span class="extype" name="scala.Char">Char</span>]</h3>
             </div><div class="parent" name="scala.collection.TraversableOnce">
-              <h3>Inherited from <span class="extype" name="scala.collection.TraversableOnce">TraversableOnce</span>[<span class="extype" name="silex.Source.Character">Character</span>]</h3>
+              <h3>Inherited from <span class="extype" name="scala.collection.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Char">Char</span>]</h3>
             </div><div class="parent" name="scala.collection.GenTraversableOnce">
-              <h3>Inherited from <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="silex.Source.Character">Character</span>]</h3>
+              <h3>Inherited from <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.Char">Char</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
