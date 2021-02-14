@@ -17,7 +17,7 @@ package silex
 
 /** Contains definitions relating to regular expressions.
   *
-  * @see See [[silex.CharRegExps]] for useful regular expressions on `Char`.
+  * @see See [[silex.CharLexers]] for useful regular expressions on `Char`.
   *
   * @group lexer
   */
@@ -42,6 +42,9 @@ trait RegExps {
 
     /** Indicates if the regular expression is productive. */
     val isProductive: Boolean
+
+    /** Indicates if the regular expressions accepts at least a non-empty word. */
+    val hasNext: Boolean
 
     /** Union of `this` and `that` regular expression.
       *
@@ -106,36 +109,43 @@ trait RegExps {
     case object EmptyStr extends RegExp {
       override val acceptsEmpty: Boolean = true
       override val isProductive: Boolean = true
+      override val hasNext: Boolean = false
     }
 
     /** Never accepts. */
     case object EmptySet extends RegExp {
       override val acceptsEmpty: Boolean = false
       override val isProductive: Boolean = false
+      override val hasNext: Boolean = false
     }
 
     /** Accepts single characters that satisfy a predicate. */
     case class Elem(predicate: Character => Boolean) extends RegExp {
       override val acceptsEmpty: Boolean = false
       override val isProductive: Boolean = true
+      override val hasNext: Boolean = true
     }
 
     /** Union of two regular expressions. */
     case class Union(left: RegExp, right: RegExp) extends RegExp {
       override val acceptsEmpty: Boolean = left.acceptsEmpty || right.acceptsEmpty
       override val isProductive: Boolean = left.isProductive || right.isProductive
+      override val hasNext: Boolean = left.hasNext || right.hasNext
     }
 
     /** Concatenation of two regular expressions. */
     case class Concat(first: RegExp, second: RegExp) extends RegExp {
       override val acceptsEmpty: Boolean = first.acceptsEmpty && second.acceptsEmpty
       override val isProductive: Boolean = first.isProductive && second.isProductive
+      override val hasNext: Boolean =
+        (first.hasNext && second.isProductive) || (first.acceptsEmpty && second.hasNext)
     }
 
     /** Kleene star of a regular expressions. */
     case class Star(regExp: RegExp) extends RegExp {
       override val acceptsEmpty: Boolean = true
       override val isProductive: Boolean = true
+      override val hasNext: Boolean = regExp.hasNext
     }
   }
 
@@ -199,26 +209,4 @@ trait RegExps {
     * @group combinator
     */
   val any: RegExp = Elem((c: Character) => true)
-}
-
-/** Regular expressions on `Char` characters.
-  * Expected to be mixed-in with [[silex.RegExps]].
-  *
-  * @group lexer
-  */
-trait CharRegExps { self: RegExps =>
-
-  type Character = Char
-
-  /** Single digit between 0 and 9. */
-  val digit = elem(_.isDigit)
-
-  /** Single digit between 1 and 9. */
-  val nonZero = elem((c: Char) => c >= '1' && c <= '9')
-
-  /** Single digit between 0 and 9 or A and F or a and f. */
-  val hex = elem((c: Char) => c.isDigit || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f'))
-
-  /** Single white space character. */
-  val whiteSpace = elem(_.isWhitespace)
 }

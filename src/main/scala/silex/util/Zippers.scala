@@ -16,7 +16,7 @@
 package silex
 package util
 
-import scala.collection.mutable.{ArrayBuffer, Buffer, HashSet, HashMap}
+import scala.collection.mutable.{ArrayBuffer, HashSet, HashMap, LongMap}
 
 /** Implements conversion to DFA through Brzozowski derivation and zippers. */
 trait Zippers { self: RegExps =>
@@ -32,14 +32,19 @@ trait Zippers { self: RegExps =>
     case object Empty extends Context
 
     /** Additional of layer of context. */
-    case class FollowBy(right: RegExp, parents: Set[Context]) extends Context
+    case class FollowBy(right: RegExp, parents: Set[Context]) extends Context {
+      require(right.hasNext)
+    }
   }
   import Context._
 
   /** Add a focus to the left of the expression. */
   private def focus(expr: RegExp): Zipper = {
-    Zipper(if (expr.isProductive) {
+    Zipper(if (expr.hasNext) {
       Set(FollowBy(expr, Set(Empty)))
+    }
+    else if (expr.acceptsEmpty) {
+      Set(Empty)
     }
     else {
       Set()
@@ -49,57 +54,14 @@ trait Zippers { self: RegExps =>
   /** Zipper-based representation of a regular expression. */
   private[silex] case class Zipper(contexts: Set[Context]) {
 
-    /** Array of predicates appearing in front position. */
-    def signature: Array[Character => Boolean] = {
-      val downPoints: Buffer[RegExp] =
-        new ArrayBuffer()
-
-      val seenUp: HashSet[Context] =
-        new HashSet()
-
-      def up(context: Context): Unit = context match {
-        case Empty => ()
-        case FollowBy(right, parents) => {
-          if (!seenUp.contains(context)) {
-            seenUp += context
-            downPoints += right
-            if (right.acceptsEmpty) {
-              parents.foreach(up)
-            }
-          }
-        }
+    /** Checks if a non-empty sting is accepted. */
+    def hasNext: Boolean = {
+      def up(context: Context): Boolean = context match {
+        case Empty => false
+        case FollowBy(_, _) => true
       }
 
-      contexts.foreach(up)
-
-      val resultsBuilder: HashSet[Elem] =
-        new HashSet()
-
-      val seenDown: HashSet[RegExp] =
-        new HashSet()
-
-      def down(expr: RegExp): Unit =
-        if (!seenDown.contains(expr)) {
-          expr match {
-            case elem@Elem(_) =>
-              resultsBuilder += elem
-            case Union(left, right) =>
-              down(left)
-              down(right)
-            case Concat(left, right) =>
-              down(left)
-              if (left.acceptsEmpty) {
-                down(right)
-              }
-            case Star(inner) =>
-              down(inner)
-            case _ => ()
-          }
-        }
-
-      downPoints.foreach(down)
-
-      resultsBuilder.toSeq.map(_.predicate).toArray
+      contexts.exists(up)
     }
 
     /** Checks if the empty string is accepted. */
@@ -130,7 +92,7 @@ trait Zippers { self: RegExps =>
 
     /** Brzozowski's derivation. */
     def derive(char: Character): Zipper = {
-      val downPoints: Buffer[(RegExp, Set[Context])] =
+      val downPoints: ArrayBuffer[(RegExp, Set[Context])] =
         new ArrayBuffer()
 
       val seenUp: HashSet[Context] =
@@ -210,7 +172,7 @@ trait Zippers { self: RegExps =>
   /** Extensible builder. */
   private class ExtensibleSetBuilder extends ContextSetBuilder {
 
-    protected val parts: Buffer[ContextSetBuilder] =
+    protected val parts: ArrayBuffer[ContextSetBuilder] =
       new ArrayBuffer
 
     def +=(builder: ContextSetBuilder): Unit = {
@@ -231,75 +193,76 @@ trait Zippers { self: RegExps =>
       extends ContextSetBuilder {
 
     lazy val build: Set[Context] = {
-      Set(FollowBy(right, builder.build))
+      if (right.hasNext) {
+        Set(FollowBy(right, builder.build))
+      }
+      else {
+        builder.build
+      }
     }
   }
 
-  /** State of the NFA.
+  /** State of an automaton.
     *
-    * @param zipper The zipper corresponding to the state.
+    * @tparam S The type of values tagged to the accepting state.
     */
-  private[silex] class State(val zipper: Zipper) {
+  private[silex] trait State[+S] {
+    /** Next state, depending on next character. */
+    def transition(char: Character): State[S]
 
-    /** Next state, based on next character. */
-    val transitions: HashMap[Character, State] =
-      new HashMap()
+    /** Indicates whether accepting states can be reached from this state,
+      * taking at least one transition.
+      */
+    val isLive: Boolean
 
-    /** Next state, based on fingerprint of next character. */
-    val derivatives: HashMap[BigInt, State] =
-      new HashMap()
-
-    /** Signature of the zipper. */
-    val signature: Array[Character => Boolean] =
-      zipper.signature
-
-    /** Checks if the state is accepting. */
-    val isAccepting: Boolean =
-      zipper.acceptsEmpty
-
-    /** Checks if the state has outgoing transitions. */
-    val isCompleted: Boolean =
-      signature.isEmpty
+    /** Indicates whether the state is accepting, and in that case what
+      * value is tagged to the state.
+      */
+    val isAccepting: Option[S]
   }
 
-  /** Deterministic Finite Automaton. */
-  private[silex] class DFA(regexp: RegExp) {
-    private val states: HashMap[Zipper, State] =
-      new HashMap()
+  /** Factory of state automatons. */
+  private[silex] object State {
 
-    private def getState(zipper: Zipper): State =
-      states.get(zipper).getOrElse {
-        val res = new State(zipper)
-        states += zipper -> res
-        res
-      }
-
-    /** Initial state of the machine. */
-    val initial = getState(focus(regexp))
-
-    /** Transition function. */
-    def apply(from: State, char: Character): State = {
-      val transitions = from.transitions
-      transitions.get(char).getOrElse {
-        val signature = from.signature
-        var i = 0
-        val size = signature.length
-        var fingerprint = BigInt(0)
-        while(i < size) {
-          if (signature(i)(char)) {
-            fingerprint = fingerprint.setBit(i)
+    /** Builds a `State` automaton from a list regular expressions, each tagged with a value. */
+    def apply[A](exprs: List[(RegExp, A)]): State[A] = {
+      val states: HashMap[List[Zipper], State[A]] = new HashMap()
+      val values: List[A] = exprs.map(_._2)
+      def newState(zippers: List[Zipper]): State[A] = new State[A] {
+        private val transitions: HashMap[Character, State[A]] = new HashMap()
+        override def transition(char: Character): State[A] =
+          transitions.getOrElseUpdate(char, getState(zippers.map(_.derive(char))))
+        override val isLive = zippers.exists(_.hasNext)
+        override val isAccepting: Option[A] =
+          zippers.zip(values).collectFirst {
+            case (zipper, value) if zipper.acceptsEmpty => value
           }
-          i += 1
-        }
-        val derivatives = from.derivatives
-        val to = derivatives.get(fingerprint).getOrElse {
-          val to = getState(from.zipper.derive(char))
-          derivatives += fingerprint -> to
-          to
-        }
-        transitions += char -> to
-        to
       }
+      def getState(zippers: List[Zipper]): State[A] =
+        states.getOrElseUpdate(zippers, newState(zippers))
+      getState(exprs.map(expr => focus(expr._1)))
+    }
+
+    /** Builds a `State` automaton from a list regular expressions, each tagged with a value.
+      *
+      * Specialized to `Char` characters.
+      */
+    def specialized[A](exprs: List[(RegExp, A)])(implicit ev: Character =:= Char): State[A] = {
+      val states: HashMap[List[Zipper], State[A]] = new HashMap()
+      val values: List[A] = exprs.map(_._2)
+      def newState(zippers: List[Zipper]): State[A] = new State[A] {
+        private val transitions: LongMap[State[A]] = new LongMap()
+        override def transition(char: Character): State[A] =
+          transitions.getOrElseUpdate(ev(char).toLong, getState(zippers.map(_.derive(char))))
+        override val isLive = zippers.exists(_.hasNext)
+        override val isAccepting: Option[A] =
+          zippers.zip(values).collectFirst {
+            case (zipper, value) if zipper.acceptsEmpty => value
+          }
+      }
+      def getState(zippers: List[Zipper]): State[A] =
+        states.getOrElseUpdate(zippers, newState(zippers))
+      getState(exprs.map(expr => focus(expr._1)))
     }
   }
 }

@@ -37,13 +37,16 @@ trait Lexers extends RegExps with Zippers {
     */
   type Position
 
+  /** Type of functions that create tokens. */
+  type TokenMaker = (Iterable[Character], (Position, Position)) => Token
+
   //---- Producers ----//
 
   /** Associates a regular expression with a token generator.
     *
     * @group producer
     */
-  case class Producer(regExp: RegExp, makeToken: (Seq[Character], (Position, Position)) => Token)
+  case class Producer(regExp: RegExp, makeToken: TokenMaker)
 
   /** Adds methods to build a `Producer` to a `RegExp`.
     *
@@ -52,16 +55,16 @@ trait Lexers extends RegExps with Zippers {
   implicit class ProducerDecorator(regExp: RegExp) {
 
     /** Creates a `Producer`. */
-    def |>(makeToken: (Seq[Character], (Position, Position)) => Token) =
+    def |>(makeToken: (Iterable[Character], (Position, Position)) => Token) =
       Producer(regExp, makeToken)
 
     /** Creates a `Producer`. */
-    def |>(makeToken: Seq[Character] => Token) =
-      Producer(regExp, (cs: Seq[Character], _: (Position, Position)) => makeToken(cs))
+    def |>(makeToken: Iterable[Character] => Token) =
+      Producer(regExp, (cs: Iterable[Character], _: (Position, Position)) => makeToken(cs))
 
     /** Creates a `Producer`. */
     def |>(token: Token) =
-      Producer(regExp, (_: Seq[Character], _: (Position, Position)) => token)
+      Producer(regExp, (_: Iterable[Character], _: (Position, Position)) => token)
   }
 
   //---- Lexers ----//
@@ -71,11 +74,11 @@ trait Lexers extends RegExps with Zippers {
     * @group lexer
     */
   class Lexer private(producers: List[Producer],
-                      errorToken: Option[(Seq[Character], (Position, Position)) => Token],
+                      errorToken: Option[TokenMaker],
                       endToken: Option[Position => Token]) {
 
     /** Specifies what token to generate in case no regular expressions match. */
-    def onError(handler: (Seq[Character], (Position, Position)) => Token): Lexer = {
+    def onError(handler: TokenMaker): Lexer = {
       new Lexer(producers, Some(handler), endToken)
     }
 
@@ -91,8 +94,10 @@ trait Lexers extends RegExps with Zippers {
       *                    or continue producting tokens (`false`). `true` by default.
       */
     def apply(source: Source[Character, Position], stopOnError: Boolean = true): Iterator[Token] =
-
       new Iterator[Token] {
+
+        // The automaton corresponding to the regular expressions.
+        private val state = stateFactory(producers.map(p => (p.regExp, p.makeToken)))
 
         /** Indicates if the source has ended. */
         private var ended: Boolean = false
@@ -104,26 +109,20 @@ trait Lexers extends RegExps with Zippers {
         private def fetchNext(): Unit = {
           val startPos = source.currentPosition
 
-          if (source.atEnd) {
+          if (!source.hasNext) {
             ended = true
             cacheNext = endToken.map(_.apply(startPos))
             return
           }
 
-          tokenizeOneZipper(source) match {
-            case Some(token) => cacheNext = Some(token)
-            case None => {
-              val endPos = source.currentPosition
-              val content = if (stopOnError) {
-                ended = true
-                source.backContent()
-              }
-              else {
-                source.consume()
-              }
-
-              cacheNext = errorToken.map(_.apply(content, (startPos, endPos)))
+          cacheNext = tokenizeOne(state, source).orElse {
+            source.next() // Skip one char.
+            source.mark()
+            val (start, content, end) = source.commit()
+            if (stopOnError) {
+              ended = true
             }
+            errorToken.map(_.apply(content, (start, end)))
           }
         }
 
@@ -158,18 +157,20 @@ trait Lexers extends RegExps with Zippers {
         stopOnError: Boolean = true,
         batchSize: Int = 50): Iterator[Token] = {
 
-      var buffer: Vector[Token] = Vector()
+      // The automaton corresponding to the regular expressions.
+      val state = stateFactory(producers.map(p => (p.regExp, p.makeToken)))
+
+      val buffer: ArrayBuffer[Token] = new ArrayBuffer(batchSize)
 
       val it = new BufferedIterator[Token]
 
       val thread = new Thread {
         override def run: Unit = {
           while (true) {
-            val startPos = source.currentPosition
 
-            if (source.atEnd) {
-              endToken.foreach { f =>
-                buffer = buffer :+ f(startPos)
+            if (!source.hasNext) {
+              endToken.foreach { makeToken =>
+                buffer += makeToken(source.currentPosition)
               }
 
               if (buffer.nonEmpty) {
@@ -181,28 +182,23 @@ trait Lexers extends RegExps with Zippers {
               return
             }
 
-            tokenizeOneZipper(source) match {
+            tokenizeOne(state, source) match {
               case Some(token) => {
-                buffer = buffer :+ token
+                buffer += token
 
                 if (buffer.size >= batchSize) {
                   it.addAll(buffer)
-                  buffer = Vector()
+                  buffer.clear()
                 }
               }
               case None => {
-                val endPos = source.currentPosition
-                val content = if (stopOnError) {
-                  source.backContent()
-                }
-                else {
-                  source.consume()
-                }
+                source.next()
+                source.mark()
+                val (start, content, end) = source.commit()
 
-                errorToken.foreach { f =>
-                  buffer = buffer :+ f(content, (startPos, endPos))
+                errorToken.foreach { makeToken =>
+                  buffer += makeToken(content, (start, end))
                 }
-
 
                 if (stopOnError) {
                   if (buffer.nonEmpty) {
@@ -215,7 +211,7 @@ trait Lexers extends RegExps with Zippers {
                 }
                 else if (buffer.size >= batchSize) {
                   it.addAll(buffer)
-                  buffer = Vector()
+                  buffer.clear()
                 }
               }
             }
@@ -228,78 +224,23 @@ trait Lexers extends RegExps with Zippers {
       it
     }
 
-    // The makeToken functions, as an array for fast access.
-    private val makeTokens = producers.map(_.makeToken).toArray
-
-    // The automata corresponding to the regular expressions, as an array for fast access.
-    private val machines = producers.map(p => new DFA(p.regExp)).toArray
-
-    // The lists of start positions and indices. A list for fast flatMap.
-    private val starts = machines.toList.zipWithIndex.map {
-      case (m, n) => (m.initial, n)
-    }
-
-    /** Tries to produce a single token from the source. Uses automata. */
-    private def tokenizeOneZipper(source: Source[Character, Position]): Option[Token] = {
-
-      // The state and index of active automata.
-      var states = starts
-
-      // The buffer containing successfully consumed input.
-      val buffer: ArrayBuffer[Character] = new ArrayBuffer()
-
-      // Start position of the consumed input.
-      val startPos = source.currentPosition
-
-      // End position of the consumed input.
-      var endPos = startPos
-
-      // Index of the last successful state machine.
-      var successful: Option[Int] = None
-
-      while (states.nonEmpty && !source.atEnd) {
-        val char = source.ahead()
-
-        // Indicates if a machine was accepting
-        // for this character already.
-        var accepted = false
-
-        // Updates the states of all machines and
-        // filter out the ones which can no longer
-        // reach an accepting state.
-        states = states.flatMap {
-          case (current, index) => {
-            val currentMachine = machines(index)
-            val next = currentMachine(current, char)
-
-            // Also records the first accepting automaton.
-            if (!accepted && next.isAccepting) {
-              endPos = source.currentPosition
-              buffer ++= source.consume()
-              successful = Some(index)
-              accepted = true
-            }
-
-            if (!next.isCompleted) {
-              (next, index) :: Nil
-            }
-            else {
-              Nil
-            }
-          }
+    /** Tries to produce a single token from the source. Uses automaton. */
+    private def tokenizeOne(state: State[TokenMaker], source: Source[Character, Position]): Option[Token] = {
+      source.mark()
+      var current: State[TokenMaker] = state
+      var lastAccepting: Option[TokenMaker] = None // We don't want to accept empty string.
+      while (current.isLive && source.hasNext) {
+        current = current.transition(source.next())
+        val acceptedValue = current.isAccepting
+        if (acceptedValue.nonEmpty) {
+          source.mark()
+          lastAccepting = acceptedValue
         }
       }
-
-      // Creates the token, if any.
-      successful.map { (index: Int) =>
-        // Resets the looked-ahead pointer in the source.
-        // Only done in case of a successful tokenization.
-        source.back()
-
-        val range = (startPos, endPos)
-        val token = makeTokens(index)(buffer.toSeq, range)
-
-        token
+      source.reset()
+      lastAccepting.map { (makeToken) =>
+        val (start, content, end) = source.commit()
+        makeToken(content, (start, end))
       }
     }
   }
@@ -316,4 +257,32 @@ trait Lexers extends RegExps with Zippers {
       */
     def apply(producers: Producer*): Lexer = new Lexer(producers.toList, None, None)
   }
+
+  private[silex] def stateFactory(exprs: List[(RegExp, TokenMaker)]): State[TokenMaker] =
+    State(exprs)
+}
+
+/** Specialized lexers operating on `Char` characters.
+  * Expected to be mixed-in with [[silex.Lexers]].
+  *
+  * @group lexer
+  */
+trait CharLexers { self: Lexers =>
+
+  type Character = Char
+
+  /** Single digit between 0 and 9. */
+  val digit = elem(_.isDigit)
+
+  /** Single digit between 1 and 9. */
+  val nonZero = elem((c: Char) => c >= '1' && c <= '9')
+
+  /** Single digit between 0 and 9 or A and F or a and f. */
+  val hex = elem((c: Char) => c.isDigit || (c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f'))
+
+  /** Single white space character. */
+  val whiteSpace = elem(_.isWhitespace)
+
+  override private[silex] def stateFactory(exprs: List[(RegExp, TokenMaker)]): State[TokenMaker] =
+    State.specialized(exprs)
 }

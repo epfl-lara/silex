@@ -41,8 +41,8 @@
   * }}}
   *
   * Additional traits can be mixed-in.
-  * See for instance [[silex.CharRegExps]]
-  * for regular expressions on `Char`.
+  * See for instance [[silex.CharLexers]]
+  * for lexers specialized on `Char`.
   *
   * =Data sources=
   *

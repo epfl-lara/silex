@@ -1,4 +1,4 @@
-/* Copyright 2020 EPFL, Lausanne
+/* Copyright 2021 EPFL, Lausanne
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,7 +85,7 @@ class LexerTests extends FlatSpec with Lexers with CharRegExps {
         (cs, _) => "error:" + cs.mkString
       }
 
-    assert(lexer(source("12AAX12")).toList == List("12", "error:AAX"))
+    assert(lexer(source("12AAX12")).toList == List("12", "error:A"))
   }
 
   it should "be able to continue after errors if specified" in {
@@ -95,7 +95,7 @@ class LexerTests extends FlatSpec with Lexers with CharRegExps {
         (cs, _) => "error:" + cs.mkString
       }
 
-    assert(lexer(source("12AAX12"), false).toList == List("12", "error:AAX", "12"))
+    assert(lexer(source("12AAX12"), false).toList == List("12", "error:A", "error:A", "error:X", "12"))
   }
 
   it should "produce end tokens" in {
@@ -108,8 +108,8 @@ class LexerTests extends FlatSpec with Lexers with CharRegExps {
       }
 
     assert(lexer(source("12AAB12")).toList == List("12", "AAB", "12", "eof"))
-    assert(lexer(source("12AAX12"), true).toList == List("12", "error:AAX"))
-    assert(lexer(source("12AAX12"), false).toList == List("12", "error:AAX", "12", "eof"))
+    assert(lexer(source("12AAX12"), true).toList == List("12", "error:A"))
+    assert(lexer(source("12AAX12"), false).toList == List("12", "error:A", "error:A", "error:X", "12", "eof"))
   }
 
   it should "correctly produce positions" in {
