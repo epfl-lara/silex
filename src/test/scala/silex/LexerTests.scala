@@ -17,7 +17,7 @@ package silex
 
 import org.scalatest._
 
-class LexerTests extends FlatSpec with Lexers with CharRegExps {
+class LexerTests extends FlatSpec with Lexers with CharLexers {
 
   type Token = String
   type Position = (Int, Int)
