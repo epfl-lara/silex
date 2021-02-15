@@ -32,7 +32,7 @@ trait Zippers { self: RegExps =>
     case object Empty extends Context
 
     /** Additional of layer of context. */
-    case class FollowBy(right: RegExp, parents: Set[Context]) extends Context {
+    case class FollowBy(right: RegExp, parent: Context) extends Context {
       require(right.hasNext)
     }
   }
@@ -41,7 +41,7 @@ trait Zippers { self: RegExps =>
   /** Add a focus to the left of the expression. */
   private def focus(expr: RegExp): Zipper = {
     Zipper(if (expr.hasNext) {
-      Set(FollowBy(expr, Set(Empty)))
+      Set(FollowBy(expr, Empty))
     }
     else if (expr.acceptsEmpty) {
       Set(Empty)
@@ -66,23 +66,15 @@ trait Zippers { self: RegExps =>
 
     /** Checks if the empty string is accepted. */
     def acceptsEmpty: Boolean = {
-      val seenUp: HashSet[Context] = new HashSet()
 
       def up(context: Context): Boolean = context match {
         case Empty => true
-        case FollowBy(right, parents) => {
-          if (seenUp.contains(context)) {
-            false
+        case FollowBy(right, parent) => {
+          if (right.acceptsEmpty) {
+            up(parent)
           }
           else {
-            seenUp += context
-
-            if (right.acceptsEmpty) {
-              parents.exists(up)
-            }
-            else {
-              false
-            }
+            false
           }
         }
       }
@@ -92,113 +84,46 @@ trait Zippers { self: RegExps =>
 
     /** Brzozowski's derivation. */
     def derive(char: Character): Zipper = {
-      val downPoints: ArrayBuffer[(RegExp, Set[Context])] =
-        new ArrayBuffer()
 
-      val seenUp: HashSet[Context] =
-        new HashSet()
+      val result: HashSet[Context] = new HashSet()
 
       def up(context: Context): Unit = context match {
         case Empty => ()
-        case FollowBy(right, parents) => {
-          if (!seenUp.contains(context)) {
-            seenUp += context
-            downPoints += ((right, parents))
-            if (right.acceptsEmpty) {
-              parents.foreach(up(_))
-            }
+        case FollowBy(right, parent) => {
+          down(right, parent)
+          if (right.acceptsEmpty) {
+            up(parent)
           }
         }
       }
+
+      def down(expr: RegExp, context: Context): Unit =
+        expr match {
+          case Elem(predicate) if predicate(char) =>
+            result += context
+          case Union(left, right) =>
+            down(left, context)
+            down(right, context)
+          case Concat(left, right) =>
+            if (right.isProductive) {
+              if (right.hasNext) {
+                down(left, FollowBy(right, context))
+              }
+              else {
+                down(left,  context)
+              }
+            }
+            if (left.acceptsEmpty) {
+              down(right, context)
+            }
+          case Star(inner) if inner.hasNext =>
+            down(inner, FollowBy(expr, context))
+          case _ => ()
+        }
 
       contexts.foreach(up)
 
-      val resultsBuilder: ExtensibleSetBuilder =
-        new ExtensibleSetBuilder()
-
-      val seenDown: HashMap[RegExp, ExtensibleSetBuilder] =
-        new HashMap()
-
-      def down(expr: RegExp, builder: ContextSetBuilder): Unit =
-        seenDown.get(expr) match {
-          case Some(extensible) => extensible += builder
-          case None => expr match {
-            case Elem(predicate) if predicate(char) =>
-              resultsBuilder += builder
-            case Union(left, right) =>
-              val childBuilder = new ExtensibleSetBuilder()
-              childBuilder += builder
-              seenDown += expr -> childBuilder
-              down(left, childBuilder)
-              down(right, childBuilder)
-            case Concat(left, right) =>
-              val childBuilder = new ExtensibleSetBuilder()
-              childBuilder += builder
-              seenDown += expr -> childBuilder
-              if (right.isProductive) {
-                val followBy = new FollowByBuilder(right, childBuilder)
-                down(left, followBy)
-              }
-              if (left.acceptsEmpty) {
-                down(right, childBuilder)
-              }
-            case Star(inner) =>
-              val childBuilder = new ExtensibleSetBuilder()
-              childBuilder += builder
-              seenDown += expr -> childBuilder
-              val followBy = new FollowByBuilder(expr, childBuilder)
-              down(inner, followBy)
-            case _ => ()
-          }
-        }
-
-      downPoints.foreach {
-        case (focus, contexts) => down(focus, ConstantSetBuilder(contexts))
-      }
-
-      Zipper(resultsBuilder.build)
-    }
-  }
-
-  /** Mutable builder of contexts. */
-  private sealed trait ContextSetBuilder {
-    def build: Set[Context]
-  }
-
-  /** Constant builder. */
-  private case class ConstantSetBuilder(val build: Set[Context])
-      extends ContextSetBuilder
-
-  /** Extensible builder. */
-  private class ExtensibleSetBuilder extends ContextSetBuilder {
-
-    protected val parts: ArrayBuffer[ContextSetBuilder] =
-      new ArrayBuffer
-
-    def +=(builder: ContextSetBuilder): Unit = {
-      parts += builder
-    }
-
-    lazy val build: Set[Context] = {
-      var result: Set[Context] = Set()
-      for (part <- parts) {
-        result ++= part.build
-      }
-      result
-    }
-  }
-
-  /** Builder of FollowBy contexts. */
-  private class FollowByBuilder(right: RegExp, builder: ContextSetBuilder)
-      extends ContextSetBuilder {
-
-    lazy val build: Set[Context] = {
-      if (right.hasNext) {
-        Set(FollowBy(right, builder.build))
-      }
-      else {
-        builder.build
-      }
+      Zipper(result.toSet)
     }
   }
 
