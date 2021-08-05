@@ -48,12 +48,11 @@ trait Lexers extends RegExps with Zippers {
     */
   case class Producer(regExp: RegExp, makeToken: TokenMaker)
 
-  /** Adds methods to build a `Producer` to a `RegExp`.
+  /** Adds methods to build a `Producer` from a `RegExp`.
     *
     * @group producer
     */
-  implicit class ProducerDecorator(regExp: RegExp) {
-
+  extension (regExp: RegExp) {
     /** Creates a `Producer`. */
     def |>(makeToken: (Iterable[Character], (Position, Position)) => Token) =
       Producer(regExp, makeToken)

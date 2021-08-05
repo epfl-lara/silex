@@ -44,7 +44,7 @@ private[silex] class BufferedIterator[A] extends Iterator[A] {
     notifyAll()
   }
 
-  def addAll(elems: Seq[A]): Unit = synchronized {
+  def addAll(elems: scala.collection.Seq[A]): Unit = synchronized {
     elements ++= elems
     notifyAll()
   }

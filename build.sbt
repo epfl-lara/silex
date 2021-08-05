@@ -1,8 +1,7 @@
 
 val commonSettings = Seq(
   version            := "0.6",
-  scalaVersion       := "2.12.13",
-  crossScalaVersions := Seq("2.12.13", "2.13.4"),
+  scalaVersion       := "3.0.1",
   organization       := "ch.epfl.lara",
 )
 
@@ -28,7 +27,7 @@ lazy val silex = project
     target in Compile in doc := baseDirectory.value / "docs",
 
     libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.9" % Test,
     ),
 
     bintrayOrganization := Some("epfl-lara"),
