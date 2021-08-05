@@ -31,7 +31,7 @@ trait Zippers { self: RegExps =>
     /** Empty context. */
     case object Empty extends Context
 
-    /** Additional of layer of context. */
+    /** Additional layer of context. */
     case class FollowBy(right: RegExp, parent: Context) extends Context {
       require(right.hasNext)
     }
@@ -54,7 +54,7 @@ trait Zippers { self: RegExps =>
   /** Zipper-based representation of a regular expression. */
   private[silex] case class Zipper(contexts: Set[Context]) {
 
-    /** Checks if a non-empty sting is accepted. */
+    /** Checks if a non-empty string is accepted. */
     def hasNext: Boolean = {
       def up(context: Context): Boolean = context match {
         case Empty => false
@@ -110,7 +110,7 @@ trait Zippers { self: RegExps =>
                 down(left, FollowBy(right, context))
               }
               else {
-                down(left,  context)
+                down(left, context)
               }
             }
             if (left.acceptsEmpty) {

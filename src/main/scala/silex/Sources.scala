@@ -25,7 +25,7 @@ import scala.collection.mutable.ArrayBuffer
   */
 trait Source[Character, Position] extends Iterator[Character] {
 
-  /** Returns the all marked content since last commit. */
+  /** Returns the marked content since last commit. */
   def commit(): (Position, Iterable[Character], Position)
 
   /** Marks the current point. */
@@ -60,7 +60,7 @@ class IteratorSource[Character, Position](
   override def next(): Character = {
     val char: Character = if (queue.nonEmpty) {
       val res = queue.last
-      queue.reduceToSize(queue.size - 1)
+      queue.dropRightInPlace(1)
       res
     }
     else {
