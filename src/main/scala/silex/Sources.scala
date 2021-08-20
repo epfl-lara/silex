@@ -60,7 +60,7 @@ class IteratorSource[Character, Position](
   override def next(): Character = {
     val char: Character = if (queue.nonEmpty) {
       val res = queue.last
-      queue.dropRightInPlace(1)
+      queue.remove(queue.size - 1)
       res
     }
     else {
