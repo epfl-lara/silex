@@ -52,7 +52,7 @@ trait Lexers extends RegExps with Zippers {
     *
     * @group producer
     */
-  extension (regExp: RegExp) {
+  implicit class ProducerDecorator(regExp: RegExp) {
     /** Creates a `Producer`. */
     def |>(makeToken: (Iterable[Character], (Position, Position)) => Token) =
       Producer(regExp, makeToken)
