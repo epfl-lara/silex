@@ -25,7 +25,7 @@ lazy val silex = project
       "-doc-root-content", baseDirectory.value + "/project/root-doc.txt"
     ),
 
-    target in Compile in doc := baseDirectory.value / "docs",
+    Compile / doc / target := baseDirectory.value / "docs",
 
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.0.8" % Test,
