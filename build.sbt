@@ -31,11 +31,13 @@ lazy val silex = project
       "org.scalatest" %% "scalatest" % "3.0.8" % Test,
     ),
 
-    bintrayOrganization := Some("epfl-lara"),
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
-    bintrayPackageLabels := Seq(
-      "scala", "lexer", "lexing"
-    ),
+    
+    // Used for release on Maven repository, which we currently do not do
+    // bintrayOrganization := Some("epfl-lara"),
+    // bintrayPackageLabels := Seq(
+    //   "scala", "lexer", "lexing"
+    // ),
   )
 
 
