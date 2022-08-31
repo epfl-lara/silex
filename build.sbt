@@ -1,8 +1,8 @@
 
 val commonSettings = Seq(
   version            := "0.6",
-  scalaVersion       := "3.0.1",
-  crossScalaVersions := Seq("2.12.13", "2.13.4", "3.0.1"),
+  scalaVersion       := "3.1.3",
+  crossScalaVersions := Seq("2.12.13", "2.13.4", "3.0.1", "3.1.3"),
   organization       := "ch.epfl.lara",
 )
 
@@ -25,17 +25,17 @@ lazy val silex = project
       "-doc-root-content", baseDirectory.value + "/project/root-doc.txt"
     ),
 
-    target in Compile in doc := baseDirectory.value / "docs",
+    Compile / doc / target := baseDirectory.value / "docs",
 
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,
     ),
 
-    bintrayOrganization := Some("epfl-lara"),
-    licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
-    bintrayPackageLabels := Seq(
-      "scala", "lexer", "lexing"
-    ),
+//    bintrayOrganization := Some("epfl-lara"),
+//    licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
+//    bintrayPackageLabels := Seq(
+//      "scala", "lexer", "lexing"
+//    ),
   )
 
 
