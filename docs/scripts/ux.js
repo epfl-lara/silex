@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (elements) {
     for (i = 0; i < elements.length; i++) {
       elements[i].onclick = function(e) {
-        if(!$(e.target).is("a"))
+        if(!$(e.target).is("a") && e.fromSnippet !== true)
           this.classList.toggle("expand")
       }
     }
@@ -20,7 +20,25 @@ window.addEventListener("DOMContentLoaded", () => {
     $(this).parent().toggleClass("expanded")
   });
 
-  $('.names .tab').on('click', function(){
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if (entry.intersectionRatio > 0) {
+        document.querySelector(`#toc li a[href="#${id}"]`).parentElement.classList.add('active');
+      } else {
+        document.querySelector(`#toc li a[href="#${id}"]`).parentElement.classList.remove('active');
+      }
+    });
+  });
+
+
+  document.querySelectorAll('#content section[id]').forEach((section) => {
+    observer.observe(section);
+  });
+
+  document.querySelectorAll("#sideMenu2 a").forEach(elem => elem.addEventListener('click', e => e.stopPropagation()))
+
+  $('.names .tab').on('click', function() {
     parent = $(this).parents(".tabs").first()
     shown = $(this).hasClass('selected')
     single = parent.hasClass("single")
@@ -32,16 +50,21 @@ window.addEventListener("DOMContentLoaded", () => {
     if (!shown) { myTab.addClass('selected') }
     if (shown && !single) myTab.removeClass('selected')
 
-    if(!shown && $(this).find(".showGraph")){
+    if(!shown && $(this).filter(".showGraph").length > 0) {
       showGraph()
       $(this).find(".showGraph").removeClass("showGraph")
     }
   })
 
   if (location.hash) {
-    var selected = document.getElementById(location.hash.substring(1));
-    if (selected){
-      selected.classList.toggle("expand");
+    var target = location.hash.substring(1);
+    // setting the 'expand' class on the top-level container causes undesireable styles
+    // to apply to the top-level docs, so we avoid this logic for that element.
+    if (target != 'container') {
+      var selected = document.getElementById(location.hash.substring(1));
+      if (selected) {
+        selected.classList.toggle("expand");
+      }
     }
   }
 
@@ -51,9 +74,59 @@ window.addEventListener("DOMContentLoaded", () => {
       window.location = pathToRoot; // global variable pathToRoot is created by the html renderer
     };
   }
+
+  document.querySelectorAll('.documentableAnchor').forEach(elem => {
+    elem.addEventListener('click', event => {
+      var $temp = $("<input>")
+      $("body").append($temp)
+      var a = document.createElement('a')
+      a.href = $(elem).attr("link")
+      $temp.val(a.href).select();
+      document.execCommand("copy")
+      $temp.remove();
+    })
+  })
+
   hljs.registerLanguage("scala", highlightDotty);
   hljs.registerAliases(["dotty", "scala3"], "scala");
-  hljs.initHighlighting();
+
+  var aliases = ['language-scala', 'language-dotty', 'language-scala3']
+
+  var highlightDeep = function(el) {
+    el.childNodes.forEach(node => {
+      if(node.nodeType == Node.TEXT_NODE) {
+        let newNode = document.createElement('span');
+        newNode.innerHTML = hljs.highlight(node.textContent, {language: 'scala'}).value;
+        el.insertBefore(newNode, node);
+        el.removeChild(node);
+      } else if(node.nodeType == Node.ELEMENT_NODE) {
+        highlightDeep(node);
+      }
+    })
+  }
+
+  document.querySelectorAll('pre code').forEach( el => {
+    if (aliases.some(alias => el.classList.contains(alias))) {
+      highlightDeep(el);
+    } else {
+      hljs.highlightElement(el);
+    }
+  });
+
+
+  /* listen for the `F` key to be pressed, to focus on the member filter input (if it's present) */
+  document.body.addEventListener('keydown', e => {
+    if (e.key == "f") {
+      const tag = e.target.tagName;
+      if (tag != "INPUT" && tag != "TEXTAREA") {
+        const filterInput = findRef('.documentableFilter input.filterableInput');
+        if (filterInput != null) {
+          // if we focus during this event handler, the `f` key gets typed into the input
+          setTimeout(() => filterInput.focus(), 1);
+        }
+      }
+    }
+  })
 });
 
 var zoom;
@@ -65,8 +138,8 @@ function showGraph() {
     if (dotNode){
       var svg = d3.select("#graph");
       var radialGradient = svg.append("defs").append("radialGradient").attr("id", "Gradient");
-      radialGradient.append("stop").attr("stop-color", "#ffd47f").attr("offset", "20%");
-      radialGradient.append("stop").attr("stop-color", "white").attr("offset", "100%");
+      radialGradient.append("stop").attr("stop-color", "var(--aureole)").attr("offset", "20%");
+      radialGradient.append("stop").attr("stop-color", "var(--code-bg)").attr("offset", "100%");
 
       var inner = svg.append("g");
 
