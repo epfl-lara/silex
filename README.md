@@ -7,3 +7,4 @@ Silex is a Scala library for writing lexers (scanners). It can be used, for exam
   * [RegExp syntax](src/main/scala/silex/RegExps.scala)
   * [Lexers](src/main/scala/silex/Lexers.scala)
   * [Zippers](src/main/scala/silex/util/Zippers.scala)
+
