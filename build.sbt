@@ -2,7 +2,7 @@
 val commonSettings = Seq(
   version            := "0.6",
   scalaVersion       := "3.5.0",
-  crossScalaVersions := Seq("2.12.13", "2.13.4", "3.0.1", "3.2.0"),
+  crossScalaVersions := Seq("2.12.13", "2.13.4", "3.0.1", "3.2.0", "3.5.0"),
   organization       := "ch.epfl.lara",
 )
 
@@ -21,7 +21,6 @@ lazy val silex = project
     Compile / doc / scalacOptions ++= Seq(
       "-groups",
       "-sourcepath", baseDirectory.value.getAbsolutePath,
-      "-doc-source-url", "https://raw.githubusercontent.com/epfl-lara/silex/master€{FILE_PATH}.scala",
       "-doc-root-content", baseDirectory.value + "/project/root-doc.txt"
     ),
 
