@@ -1,4 +1,4 @@
-name: Inox CI
+name: Compile and run sbt test
 on:
   pull_request:
   push:
