@@ -156,7 +156,7 @@ trait RegExps {
     * @group combinator
     */
   def oneOf(chars: Seq[Character]): RegExp = {
-    val set = Set(chars: _*)
+    val set = Set(chars*)
     elem((c: Character) => set.contains(c))
   }
 
