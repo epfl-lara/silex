@@ -1,11 +1,36 @@
-<html><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>Lexers</title><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"></link><script type="text/javascript" src="../scripts/theme.js"></script><script type="text/javascript" src="../scripts/searchData.js" defer="true"></script><script type="text/javascript" src="../scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="../styles/nord-light.css"></link><link rel="stylesheet" href="../styles/scalastyle.css"></link><link rel="stylesheet" href="../styles/colors.css"></link><link rel="stylesheet" href="../styles/dotty-icons.css"></link><link rel="stylesheet" href="../styles/diagram.css"></link><link rel="stylesheet" href="../styles/filter-bar.css"></link><link rel="stylesheet" href="../styles/code-snippets.css"></link><link rel="stylesheet" href="../styles/searchbar.css"></link><link rel="stylesheet" href="../styles/social-links.css"></link><link rel="stylesheet" href="../styles/ux.css"></link><link rel="stylesheet" href="../styles/versions-dropdown.css"></link><link rel="stylesheet" href="../styles/fontawesome.css"></link><script type="text/javascript" src="../hljs/highlight.min.js" defer="true"></script><script type="text/javascript" src="../scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="../scripts/ux.js" defer="true"></script><script type="text/javascript" src="../scripts/common/component.js" defer="true"></script><script type="text/javascript" src="../scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="../scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="../scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="../scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="../scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="../scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="../scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="../scripts/data.js" defer="true"></script><script>var pathToRoot = "../";</script></head><body><div id="container"><div id="leftColumn"><div id="logo"><span><div class="projectName">silex</div></span><div id="version"><div class="versions-dropdown"><div onclick="dropdownHandler()" id="dropdown-button" class="dropdownbtn dropdownbtnactive"><div id="dropdown-content" class="dropdown-content"><input type="text" placeholder="Search..." id="dropdown-input" onkeyup="filterFunction()"></input></div></div></div></div><div class="socials"></div></div><div id="paneSearch"></div><nav id="sideMenu2"><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="../index.html"><span>silex</span></a></span><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="../silex.html"><span class="micon pa"></span><span>silex</span></a></span><div class="ni "><span class="nh "><a href="CharLexers.html"><span class="micon tr"></span><span>CharLexers</span></a></span></div><div class="ni "><span class="nh "><a href="IndexPositioner$.html"><span class="micon ob"></span><span>IndexPositioner</span></a></span></div><div class="ni expanded"><span class="nh selected expanded"><span class="ar"></span><a href="Lexers.html"><span class="micon tr"></span><span>Lexers</span></a></span><div class="ni "><span class="nh "><a href="Lexers$Lexer.html"><span class="micon cl"></span><span>Lexer</span></a></span></div><div class="ni "><span class="nh "><a href="Lexers$Lexer$.html"><span class="micon ob"></span><span>Lexer</span></a></span></div><div class="ni "><span class="nh "><a href="Lexers$Producer.html"><span class="micon cl"></span><span>Producer</span></a></span></div><div class="ni "><span class="nh "><a href="Lexers$ProducerDecorator.html"><span class="micon cl"></span><span>ProducerDecorator</span></a></span></div></div><div class="ni "><span class="nh "><a href="NoPositioner$.html"><span class="micon ob"></span><span>NoPositioner</span></a></span></div><div class="ni "><span class="nh "><a href="Positioner.html"><span class="micon tr"></span><span>Positioner</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="RegExps.html"><span class="micon tr"></span><span>RegExps</span></a></span><div class="ni "><span class="nh "><a href="RegExps$RegExp.html"><span class="micon cl"></span><span>RegExp</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="RegExps$RegExp$.html"><span class="micon ob"></span><span>RegExp</span></a></span><div class="ni "><span class="nh "><a href="RegExps$RegExp$$Concat.html"><span class="micon cl"></span><span>Concat</span></a></span></div><div class="ni "><span class="nh "><a href="RegExps$RegExp$$Elem.html"><span class="micon cl"></span><span>Elem</span></a></span></div><div class="ni "><span class="nh "><a href="RegExps$RegExp$$EmptySet$.html"><span class="micon ob"></span><span>EmptySet</span></a></span></div><div class="ni "><span class="nh "><a href="RegExps$RegExp$$EmptyStr$.html"><span class="micon ob"></span><span>EmptyStr</span></a></span></div><div class="ni "><span class="nh "><a href="RegExps$RegExp$$Star.html"><span class="micon cl"></span><span>Star</span></a></span></div><div class="ni "><span class="nh "><a href="RegExps$RegExp$$Union.html"><span class="micon cl"></span><span>Union</span></a></span></div></div></div><div class="ni "><span class="nh "><a href="StringPosition.html"><span class="micon cl"></span><span>StringPosition</span></a></span></div><div class="ni "><span class="nh "><a href="StringPositioner$.html"><span class="micon ob"></span><span>StringPositioner</span></a></span></div></div><div class="ni"><span class="nh "><span class="ar"></span><a href="util.html"><span class="micon pa"></span><span>silex.util</span></a></span><div class="ni "><span class="nh "><a href="util/Zippers.html"><span class="micon tr"></span><span>Zippers</span></a></span></div></div></div></nav></div><div id="main"><div id="leftToggler"><span class="icon-toggler"></span></div><div id="scaladoc-searchBar"></div><main id="main-content"><div class="breadcrumbs container"><a href="../index.html">silex</a>/<a href="../silex.html">silex</a>/<a href="Lexers.html">Lexers</a></div><div id="content"><div><div class="cover-header"><span class="micon tr"></span><h1>Lexers</h1></div><div class="signature monospace"><span class="annotations monospace"></span><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">trait </span></span><a href="Lexers.html" class="documentableName ">Lexers</a><span><span t="k"> extends </span><a href="RegExps.html" t="t">RegExps</a><span t="k"> with </span><a href="util/Zippers.html" t="t">Zippers</a></span></div></div><div class="cover"><div class="doc"><p>Contains definitions for lexers.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div><div class="tabs single"><div class="names"><button data-togglable="graph" class="tab showGraph">Graph</button><button data-togglable="supertypes" class="tab ">Supertypes</button></div><div class="contents"><div data-togglable="graph" class="tab showGraph"><div id="inheritance-diagram" class="diagram-class showGraph"><input value="Reset zoom" type="button" class="btn" onclick="zoomOut()"></input><svg id="graph"></svg><script type="text/dot" id="dot"> digraph g {
- node0 [id=node0, label="<span style=\"color: #FFFFFF;\">trait <a href=\"Lexers.html\" t=\"t\">Lexers</a></span>", style="fill: #1CAACF;"];
-node1 [id=node1, label="<span style=\"color: #FFFFFF;\">class <span data-unresolved-link=\"\" t=\"t\">Object</span></span>", style="fill: #45AD7D;"];
-node2 [id=node2, label="<span style=\"color: #FFFFFF;\">class <span data-unresolved-link=\"\" t=\"t\">Any</span></span>", style="fill: #45AD7D;"];
-node3 [id=node3, label="<span style=\"color: #FFFFFF;\">trait <span data-unresolved-link=\"\" t=\"t\">Matchable</span></span>", style="fill: #1CAACF;"];
-node4 [id=node4, label="<span style=\"color: #FFFFFF;\">trait <a href=\"RegExps.html\" t=\"t\">RegExps</a></span>", style="fill: #1CAACF;"];
-node5 [id=node5, label="<span style=\"color: #FFFFFF;\">trait <a href=\"util/Zippers.html\" t=\"t\">Zippers</a></span>", style="fill: #1CAACF;"];
+<!DOCTYPE html><html data-pathToRoot="../" data-rawLocation="silex/Lexers" data-dynamicSideMenu="false"><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta><title>Lexers</title><link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"></link><script type="text/javascript" src="../scripts/theme.js"></script><script type="text/javascript" src="../scripts/searchData.js" defer="true"></script><script type="text/javascript" src="../scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="../styles/theme/bundle.css"></link><link rel="stylesheet" href="../styles/theme/components/bundle.css"></link><link rel="stylesheet" href="../styles/theme/components/button/bundle.css"></link><link rel="stylesheet" href="../styles/theme/layout/bundle.css"></link><link rel="stylesheet" href="../styles/nord-light.css"></link><link rel="stylesheet" href="../styles/dotty-icons.css"></link><link rel="stylesheet" href="../styles/filter-bar.css"></link><link rel="stylesheet" href="../styles/code-snippets.css"></link><link rel="stylesheet" href="../styles/searchbar.css"></link><link rel="stylesheet" href="../styles/social-links.css"></link><link rel="stylesheet" href="../styles/versions-dropdown.css"></link><link rel="stylesheet" href="../styles/content-contributors.css"></link><link rel="stylesheet" href="../styles/fontawesome.css"></link><script type="text/javascript" src="../hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="../scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="../scripts/ux.js" defer="true"></script><script type="text/javascript" src="../scripts/common/component.js" defer="true"></script><script type="text/javascript" src="../scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="../scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="../scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="../scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="../scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="../scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="../scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="../scripts/contributors.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="../scripts/data.js" defer="true"></script><link rel="stylesheet" href="../styles/apistyles.css"></link><script>var pathToRoot = "../";</script></head><body><div id=""><div id="header" class="body-small"><div class="header-container-left"><a href="../" class="logo-container"><span class="project-name h300">silex</span></a><span onclick="dropdownHandler(event)" class="text-button with-arrow" id="dropdown-trigger"><a></a></span><div id="version-dropdown" class="dropdown-menu"></div></div><div class="header-container-right"><button id="search-toggle" class="icon-button"></button><span id="theme-toggle" class="icon-button"></span><span id="mobile-menu-toggle" class="icon-button hamburger"></span></div></div><div id="mobile-menu"><div class="mobile-menu-header body-small"><span class="mobile-menu-logo"><span class="project-name h300">silex</span></span><button id="mobile-menu-close" class="icon-button close"></button></div><div class="mobile-menu-container body-medium"><input id="mobile-scaladoc-searchbar-input" class="scaladoc-searchbar-input" type="search" placeholder="Find anything"></input><span id="mobile-theme-toggle" class="mobile-menu-item mode"></span></div></div><span id="mobile-sidebar-toggle" class="floating-button"></span><div id="leftColumn" class="body-small"><div class="switcher-container"><a id="api-nav-button" class="switcher h100 selected" href="../index.html">API</a></div><nav id="api-nav" class="side-menu"><div class="ni n0 expanded"><span class="nh h100 expanded cs"><button class="ar icon-button expanded"></button><a href="../silex.html"><span class="micon pa"></span><span>silex</span></a></span><div class="ni n1"><span class="nh "><button class="ar icon-button "></button><a href="util.html"><span class="micon pa"></span><span>util</span></a></span><div class="ni n2 "><span class="nh "><a href="util/Zippers.html"><span class="micon tr"></span><span>Zippers</span></a></span></div></div><div class="ni n1 "><span class="nh "><a href="ArraySource.html"><span class="micon cl"></span><span>ArraySource</span></a></span></div><div class="ni n1 "><span class="nh "><a href="CharLexers.html"><span class="micon tr"></span><span>CharLexers</span></a></span></div><div class="ni n1 "><span class="nh "><a href="IndexPositioner$.html"><span class="micon ob"></span><span>IndexPositioner</span></a></span></div><div class="ni n1 "><span class="nh "><a href="IteratorSource.html"><span class="micon cl"></span><span>IteratorSource</span></a></span></div><div class="ni n1 expanded"><span class="nh h100 selected"><button class="ar icon-button expanded"></button><a href="#"><span class="micon tr"></span><span>Lexers</span></a></span><div class="ni n2 "><span class="nh "><a href="Lexers$Lexer.html"><span class="micon cl"></span><span>Lexer</span></a></span></div><div class="ni n2 "><span class="nh "><a href="Lexers$Lexer$.html"><span class="micon ob"></span><span>Lexer</span></a></span></div><div class="ni n2 "><span class="nh "><a href="Lexers$Producer.html"><span class="micon cl"></span><span>Producer</span></a></span></div><div class="ni n2 "><span class="nh "><a href="Lexers$ProducerDecorator.html"><span class="micon cl"></span><span>ProducerDecorator</span></a></span></div></div><div class="ni n1 "><span class="nh "><a href="NoPositioner$.html"><span class="micon ob"></span><span>NoPositioner</span></a></span></div><div class="ni n1 "><span class="nh "><a href="Positioner.html"><span class="micon tr"></span><span>Positioner</span></a></span></div><div class="ni n1 "><span class="nh "><a href="ReaderSource.html"><span class="micon cl"></span><span>ReaderSource</span></a></span></div><div class="ni n1"><span class="nh "><button class="ar icon-button "></button><a href="RegExps.html"><span class="micon tr"></span><span>RegExps</span></a></span><div class="ni n2 "><span class="nh "><a href="RegExps$RegExp.html"><span class="micon cl"></span><span>RegExp</span></a></span></div><div class="ni n2"><span class="nh "><button class="ar icon-button "></button><a href="RegExps$RegExp$.html"><span class="micon ob"></span><span>RegExp</span></a></span><div class="ni n3 "><span class="nh "><a href="RegExps$RegExp$$Concat.html"><span class="micon cl"></span><span>Concat</span></a></span></div><div class="ni n3 "><span class="nh "><a href="RegExps$RegExp$$Elem.html"><span class="micon cl"></span><span>Elem</span></a></span></div><div class="ni n3 "><span class="nh "><a href="RegExps$RegExp$$EmptySet$.html"><span class="micon ob"></span><span>EmptySet</span></a></span></div><div class="ni n3 "><span class="nh "><a href="RegExps$RegExp$$EmptyStr$.html"><span class="micon ob"></span><span>EmptyStr</span></a></span></div><div class="ni n3 "><span class="nh "><a href="RegExps$RegExp$$Star.html"><span class="micon cl"></span><span>Star</span></a></span></div><div class="ni n3 "><span class="nh "><a href="RegExps$RegExp$$Union.html"><span class="micon cl"></span><span>Union</span></a></span></div></div></div><div class="ni n1 "><span class="nh "><a href="Source.html"><span class="micon tr"></span><span>Source</span></a></span></div><div class="ni n1 "><span class="nh "><a href="Source$.html"><span class="micon ob"></span><span>Source</span></a></span></div><div class="ni n1 "><span class="nh "><a href="StringPosition.html"><span class="micon cl"></span><span>StringPosition</span></a></span></div><div class="ni n1 "><span class="nh "><a href="StringPositioner$.html"><span class="micon ob"></span><span>StringPositioner</span></a></span></div><div class="ni n1 "><span class="nh "><a href="StringSource.html"><span class="micon cl"></span><span>StringSource</span></a></span></div></div></nav></div><div id="footer" class="body-small"><div class="left-container">Generated with</div><div class="right-container"><div class="text"></div></div><div class="text-mobile"></div></div><div id="scaladoc-searchBar"></div><div id="main"><div class="breadcrumbs container"><a href="../index.html">silex</a>/<a href="../silex.html">silex</a>/<a href="Lexers.html">Lexers</a></div><div id="content" class="body-medium"><div><div class="cover-header">
+ <span class="icon"><span class="micon tr"></span></span>
+ <h1 class="h600 single">Lexers</h1>
+</div>
+<div class="fqname body-large">
+ <span>silex.Lexers</span>
+</div>
+<div class="main-signature mono-small-block">
+ <div class="signature">
+  <span class="signature-short"><span class="modifiers"></span><span class="kind"><span t="k">trait </span></span><a href="Lexers.html" t="n" class="documentableName ">Lexers</a><span t="k"> extends </span><a href="RegExps.html" t="t">RegExps</a><span t="k">, </span></span><span class="signature-long"><a href="util/Zippers.html" t="t">Zippers</a></span>
+ </div>
+</div>
+<div class="cover">
+ <div class="doc">
+  <p>Contains definitions for lexers.</p>
+ </div>
+ <section id="attributes">
+  <h2 class="h500">Attributes</h2>
+  <dl class="attributes">
+   <dt class="body-small">
+    Graph
+   </dt>
+   <dd class="body-medium">
+    <div id="inheritance-diagram" class="diagram-class showGraph">
+     <button type="button" class="label-only-button" onclick="zoomOut()">Reset zoom</button><button type="button" class="label-only-button" onclick="hideGraph()">Hide graph</button><button type="button" class="label-only-button" onclick="showGraph()">Show graph</button>
+     <svg id="graph"></svg>
+     <script type="text/dot" id="dot"> digraph g {
+ node0 [id=node0, label="<span style=\"color: #FFFFFF;\">trait <a href=\"Lexers.html\" t=\"n\">Lexers</a></span>", class="trait vertex"];
+node1 [id=node1, label="<span style=\"color: #FFFFFF;\">class <span data-unresolved-link=\"\" t=\"n\">Object</span></span>", class="class vertex"];
+node2 [id=node2, label="<span style=\"color: #FFFFFF;\">class <span data-unresolved-link=\"\" t=\"n\">Any</span></span>", class="class vertex"];
+node3 [id=node3, label="<span style=\"color: #FFFFFF;\">trait <span data-unresolved-link=\"\" t=\"n\">Matchable</span></span>", class="trait vertex"];
+node4 [id=node4, label="<span style=\"color: #FFFFFF;\">trait <a href=\"RegExps.html\" t=\"n\">RegExps</a></span>", class="trait vertex"];
+node5 [id=node5, label="<span style=\"color: #FFFFFF;\">trait <a href=\"util/Zippers.html\" t=\"n\">Zippers</a></span>", class="trait vertex"];
 
 
  node0 -> node1;
@@ -18,47 +43,857 @@ node0 -> node5;
 node5 -> node1;
 
 }
-</script></div></div><div data-togglable="supertypes" class="tab "><div class="symbol monospace"><div>trait <a href="util/Zippers.html" t="t">Zippers</a></div><div>trait <a href="RegExps.html" t="t">RegExps</a></div><div>class <span data-unresolved-link="" t="t">Object</span></div><div>trait <span data-unresolved-link="" t="t">Matchable</span></div><div>class <span data-unresolved-link="" t="t">Any</span></div></div></div></div></div><div class="documentableFilter"><div class="filterUpperContainer"><button class="filterToggleButton" data-test-id="filterToggleButton">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-          </svg>
-        </button><input class="filterableInput" placeholder="Filter all members" data-test-id="filterBarInput"></input></div><div class="filterLowerContainer"></div></div><div class="membersList"><div class="tabs"><div class="names"><button data-togglable="custom_groups" class="tab selected">Grouped members</button><button data-togglable="Type members" class="tab selected">Type members</button></div><div class="contents"><div data-togglable="custom_groups" class="tab selected"><div class="documentableList"><h3>regexp</h3><div class="documentableElement" data-f-keywords="sealed,abstract" data-f-inherited="RegExps"><a link="RegExps$RegExp.html" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"><span t="k">sealed abstract </span></span><span class="kind"><span t="k">class </span></span><a href="RegExps$RegExp.html" class="documentableName ">RegExp</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expressions over characters.</p>
-</div><div class="cover"><div class="doc"><p>Regular expressions over characters.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps$RegExp.html">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" data-f-inherited="RegExps"><a link="RegExps$RegExp$.html" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">object </span></span><a href="RegExps$RegExp$.html" class="documentableName ">RegExp</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Contains primitive constructors for regular expressions.</p>
-</div><div class="cover"><div class="doc"><p>Contains primitive constructors for regular expressions.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps$RegExp$.html">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div></div><div class="documentableList"><h3>abstract</h3><div class="documentableElement" id="Character-0" data-f-inherited="RegExps"><a link="Lexers.html#Character-0" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#Character-0" class="documentableName ">Character</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Type of characters.</p>
-</div><div class="cover"><div class="doc"><p>Type of characters.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#Character-0">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="Position-0"><a link="Lexers.html#Position-0" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#Position-0" class="documentableName ">Position</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Type of positions.</p>
-</div><div class="cover"><div class="doc"><p>Type of positions.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="Token-0"><a link="Lexers.html#Token-0" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#Token-0" class="documentableName ">Token</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Type of tokens.</p>
-</div><div class="cover"><div class="doc"><p>Type of tokens.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div></div><div class="documentableList"><h3>producer</h3><div class="documentableElement" data-f-keywords="case"><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"><span t="k">case </span></span><span class="kind"><span t="k">class </span></span><a href="Lexers$Producer.html" class="documentableName ">Producer</a><span>(<span t="k"></span><span t="k"></span>regExp: <a href="RegExps$RegExp.html" t="t">RegExp</a>, <span t="k"></span>makeToken: <a href="Lexers.html#TokenMaker-0" t="t">TokenMaker</a>)</span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Associates a regular expression with a token generator.</p>
-</div><div class="cover"><div class="doc"><p>Associates a regular expression with a token generator.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" data-f-keywords="implicit"><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"><span t="k">implicit </span></span><span class="kind"><span t="k">class </span></span><a href="Lexers$ProducerDecorator.html" class="documentableName ">ProducerDecorator</a><span>(<span t="k"></span><span t="k"></span>regExp: <a href="RegExps$RegExp.html" t="t">RegExp</a>)</span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
-</div><div class="cover"><div class="doc"><p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="ProducerDecorator-ffffffb9" data-f-keywords="final,implicit"><a link="Lexers.html#ProducerDecorator-ffffffb9" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"><span t="k">final implicit </span></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#ProducerDecorator-ffffffb9" class="documentableName ">ProducerDecorator</a><span>(<span t="k"></span><span t="k"></span>regExp: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="Lexers$ProducerDecorator.html" t="t">ProducerDecorator</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
-</div><div class="cover"><div class="doc"><p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div></div><div class="documentableList"><h3>lexer</h3><div class="documentableElement"><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">class </span></span><a href="Lexers$Lexer.html" class="documentableName ">Lexer</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Tokenizes an input source with respect to a sequence of token producers.</p>
-</div><div class="cover"><div class="doc"><p>Tokenizes an input source with respect to a sequence of token producers.</p>
-</div><dl class="attributes"><dt>Companion:</dt><dd><a href="Lexers$Lexer$.html">object</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement"><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">object </span></span><a href="Lexers$Lexer$.html" class="documentableName ">Lexer</a><span></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Contains utilities to build lexers.</p>
-</div><div class="cover"><div class="doc"><p>Contains utilities to build lexers.</p>
-</div><dl class="attributes"><dt>Companion:</dt><dd><a href="Lexers$Lexer.html">class</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div></div><div class="documentableList"><h3>combinator</h3><div class="documentableElement" id="any-0" data-f-inherited="RegExps"><a link="Lexers.html#any-0" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">val </span></span><a href="Lexers.html#any-0" class="documentableName ">any</a><span>: <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts any single character.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts any single character.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#any-0">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="elem-fffff985" data-f-inherited="RegExps"><a link="Lexers.html#elem-fffff985" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#elem-fffff985" class="documentableName ">elem</a><span>(<span t="k"></span><span t="k"></span>char: <a href="RegExps.html#Character-0" t="t">Character</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts only the single character <code>char</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts only the single character <code>char</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#elem-fffff985">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="elem-983" data-f-inherited="RegExps"><a link="Lexers.html#elem-983" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#elem-983" class="documentableName ">elem</a><span>(<span t="k"></span><span t="k"></span>predicate: <a href="RegExps.html#Character-0" t="t">Character</a><span t="k"> =&gt; </span><span data-unresolved-link="" t="t">Boolean</span>): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts single characters based on a <code>predicate</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts single characters based on a <code>predicate</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#elem-983">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="many-1e4" data-f-inherited="RegExps"><a link="Lexers.html#many-1e4" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#many-1e4" class="documentableName ">many</a><span>(<span t="k"></span><span t="k"></span>regExp: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts zero or more repetitions of <code>regExp</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts zero or more repetitions of <code>regExp</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#many-1e4">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="many1-1e4" data-f-inherited="RegExps"><a link="Lexers.html#many1-1e4" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#many1-1e4" class="documentableName ">many1</a><span>(<span t="k"></span><span t="k"></span>regExp: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts one or more repetitions of <code>regExp</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts one or more repetitions of <code>regExp</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#many1-1e4">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="oneOf-e1d" data-f-inherited="RegExps"><a link="Lexers.html#oneOf-e1d" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#oneOf-e1d" class="documentableName ">oneOf</a><span>(<span t="k"></span><span t="k"></span>chars: <span data-unresolved-link="" t="t">Seq</span>[<a href="RegExps.html#Character-0" t="t">Character</a>]): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts any of the characters in <code>chars</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts any of the characters in <code>chars</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#oneOf-e1d">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="opt-1e4" data-f-inherited="RegExps"><a link="Lexers.html#opt-1e4" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#opt-1e4" class="documentableName ">opt</a><span>(<span t="k"></span><span t="k"></span>regExp: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts zero or one instances of <code>regExp</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts zero or one instances of <code>regExp</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#opt-1e4">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div><div class="documentableElement" id="word-e1d" data-f-inherited="RegExps"><a link="Lexers.html#word-e1d" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#word-e1d" class="documentableName ">word</a><span>(<span t="k"></span><span t="k"></span>chars: <span data-unresolved-link="" t="t">Seq</span>[<a href="RegExps.html#Character-0" t="t">Character</a>]): <a href="RegExps$RegExp.html" t="t">RegExp</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Regular expression that accepts only the sequence of characters <code>chars</code>.</p>
-</div><div class="cover"><div class="doc"><p>Regular expression that accepts only the sequence of characters <code>chars</code>.</p>
-</div><dl class="attributes"><dt>Inherited from:</dt><dd><a href="RegExps.html#word-e1d">RegExps</a></dd><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/RegExps.scala">RegExps.scala</a></dd></dl></div></div></div></div></div></div></div><div data-togglable="Type members" class="tab selected"><h2 data-togglable="Type members">Type members</h2><div class="documentableList"><h3 class="groupHeader">Types</h3><div class="documentableElement" id="TokenMaker-0"><a link="Lexers.html#TokenMaker-0" class="documentableAnchor"></a><div><span class="annotations monospace"></span></div><div class="header monospace"><div class="signature"><span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#TokenMaker-0" class="documentableName ">TokenMaker</a><span> = (<span data-unresolved-link="" t="t">Iterable</span>[<a href="RegExps.html#Character-0" t="t">Character</a>], (<a href="Lexers.html#Position-0" t="t">Position</a>, <a href="Lexers.html#Position-0" t="t">Position</a>))<span t="k"> =&gt; </span><a href="Lexers.html#Token-0" t="t">Token</a></span></div></div><div class="docs"><span class="modifiers"></span><div><div class="originInfo"></div><div class="memberDocumentation"><div class="documentableBrief doc"><p>Type of functions that create tokens.</p>
-</div><div class="cover"><div class="doc"><p>Type of functions that create tokens.</p>
-</div><dl class="attributes"><dt>Source:</dt><dd><a href="https://raw.githubusercontent.com/epfl-lara/silex/master/src/main/scala/silex/Lexers.scala">Lexers.scala</a></dd></dl></div></div></div></div></div></div></div></div></div></div></div></div></main><footer><div id="generated-by"><span class="footer-text">Generated by</span><a href="https://github.com/lampepfl/dotty/tree/main/scaladoc"><img src="../images/scaladoc_logo.svg" alt="scaladoc" class="scaladoc_logo"></img><img src="../images/scaladoc_logo_dark.svg" alt="scaladoc" class="scaladoc_logo_dark"></img></a></div><div class="socials"><span class="footer-text"></span></div><div class="mode"><span class="footer-text">Mode</span><label id="theme-toggle" class="switch"><input type="checkbox"></input><span class="slider"></span></label></div><span class="go-to-top-icon"><a href="#container"><span class="icon-vertical_align_top"></span><span class="footer-text">Back to top</span></a></span></footer></div></div></body></html>
+</script>
+    </div>
+   </dd>
+   <dt class="body-small">
+    Supertypes
+   </dt>
+   <dd class="body-medium">
+    <div class="mono-small-block supertypes">
+     <div>
+      trait <a href="util/Zippers.html" t="n">Zippers</a>
+     </div>
+     <div>
+      trait <a href="RegExps.html" t="n">RegExps</a>
+     </div>
+     <div>
+      class <span data-unresolved-link="" t="n">Object</span>
+     </div>
+     <div>
+      trait <span data-unresolved-link="" t="n">Matchable</span>
+     </div>
+     <div>
+      class <span data-unresolved-link="" t="n">Any</span>
+     </div><span></span>
+    </div>
+   </dd>
+  </dl>
+ </section>
+</div>
+<section id="members-list">
+ <h2 class="h500">Members list</h2>
+ <div class="documentableFilter">
+  <div class="filtersContainer"></div><input class="filterableInput" placeholder="Filter by any phrase" data-test-id="filterBarInput" type="search"><button class="clearButton label-only-button" data-test-id="filterBarClearButton">Clear all</button>
+ </div>
+ <div class="membersList expand">
+  <div class="tabs">
+   <div class="contents">
+    <section id="Grouped-members">
+     <div data-togglable="grouped_members" class="tab expand">
+      <div class="member-group-header">
+       <h3 data-togglable="grouped_members" class="h400">Grouped members</h3>
+      </div>
+      <div class="documentableList expand">
+       <button class="icon-button show-content expand"></button>
+       <h3 class="h200">regexp</h3>
+       <div class="documentableElement" data-f-keywords="sealed,abstract" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"><span t="k">sealed abstract </span></span><span class="kind"><span t="k">class </span></span><a href="RegExps$RegExp.html" t="n" class="documentableName ">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expressions over characters.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expressions over characters.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps$RegExp.html">RegExps</a>
+             </dd>
+             <dt class="body-small">
+              Supertypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <div>
+                class <span data-unresolved-link="" t="n">Object</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Matchable</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Any</span>
+               </div><span></span>
+              </div>
+             </dd>
+             <dt class="body-small">
+              Known subtypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block subtypes">
+               <div>
+                class <a href="RegExps$RegExp$$Concat.html" t="n">Concat</a>
+               </div>
+               <div>
+                class <a href="RegExps$RegExp$$Elem.html" t="n">Elem</a>
+               </div>
+               <div>
+                object <a href="RegExps$RegExp$$EmptySet$.html" t="n">EmptySet</a>
+               </div>
+               <div>
+                object <a href="RegExps$RegExp$$EmptyStr$.html" t="n">EmptyStr</a>
+               </div>
+               <div>
+                class <a href="RegExps$RegExp$$Star.html" t="n">Star</a>
+               </div>
+               <div>
+                class <a href="RegExps$RegExp$$Union.html" t="n">Union</a>
+               </div><span class="show-all-code show-content text-button h100">Show all</span>
+              </div>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">object </span></span><a href="RegExps$RegExp$.html" t="n" class="documentableName ">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Contains primitive constructors for regular expressions.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Contains primitive constructors for regular expressions.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps$RegExp$.html">RegExps</a>
+             </dd>
+             <dt class="body-small">
+              Supertypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <div>
+                trait <span data-unresolved-link="" t="n">Sum</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Mirror</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Object</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Matchable</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Any</span>
+               </div><span></span>
+              </div>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="documentableList expand">
+       <button class="icon-button show-content expand"></button>
+       <h3 class="h200">abstract</h3>
+       <div class="documentableElement" id="Character-0" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#Character-0" t="n" class="documentableName ">Character</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Type of characters.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Type of characters.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#Character-0">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="Position-0">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#Position-0" t="n" class="documentableName ">Position</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Type of positions.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Type of positions.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small"></dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="Token-0">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#Token-0" t="n" class="documentableName ">Token</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Type of tokens.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Type of tokens.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small"></dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="documentableList expand">
+       <button class="icon-button show-content expand"></button>
+       <h3 class="h200">producer</h3>
+       <div class="documentableElement" data-f-keywords="case">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"><span t="k">case </span></span><span class="kind"><span t="k">class </span></span><a href="Lexers$Producer.html" t="n" class="documentableName ">Producer</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">regExp</span>: <a href="RegExps$RegExp.html" t="t">RegExp</a>, <span t="k"></span><span data-unresolved-link="" t="n">makeToken</span>: <a href="Lexers.html#TokenMaker-0" t="t">TokenMaker</a>)
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Associates a regular expression with a token generator.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Associates a regular expression with a token generator.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Supertypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <div>
+                trait <span data-unresolved-link="" t="n">Serializable</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Product</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Equals</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Object</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Matchable</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Any</span>
+               </div><span class="show-all-code show-content text-button h100">Show all</span>
+              </div>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" data-f-keywords="implicit">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"><span t="k">implicit </span></span><span class="kind"><span t="k">class </span></span><a href="Lexers$ProducerDecorator.html" t="n" class="documentableName ">ProducerDecorator</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">regExp</span>: <a href="RegExps$RegExp.html" t="t">RegExp</a>)
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Supertypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <div>
+                class <span data-unresolved-link="" t="n">Object</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Matchable</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Any</span>
+               </div><span></span>
+              </div>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="ProducerDecorator-ffffffb9" data-f-keywords="final,implicit">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"><span t="k">final implicit </span></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#ProducerDecorator-ffffffb9" t="n" class="documentableName ">ProducerDecorator</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">regExp</span>: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="Lexers$ProducerDecorator.html" t="t">ProducerDecorator</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Adds methods to build a <code>Producer</code> from a <code>RegExp</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small"></dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="documentableList expand">
+       <button class="icon-button show-content expand"></button>
+       <h3 class="h200">lexer</h3>
+       <div class="documentableElement">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">class </span></span><a href="Lexers$Lexer.html" t="n" class="documentableName ">Lexer</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Tokenizes an input source with respect to a sequence of token producers.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Tokenizes an input source with respect to a sequence of token producers.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Companion
+             </dt>
+             <dd class="body-medium">
+              <a href="Lexers$Lexer$.html">object</a>
+             </dd>
+             <dt class="body-small">
+              Supertypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <div>
+                class <span data-unresolved-link="" t="n">Object</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Matchable</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Any</span>
+               </div><span></span>
+              </div>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">object </span></span><a href="Lexers$Lexer$.html" t="n" class="documentableName ">Lexer</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Contains utilities to build lexers.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Contains utilities to build lexers.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Companion
+             </dt>
+             <dd class="body-medium">
+              <a href="Lexers$Lexer.html">class</a>
+             </dd>
+             <dt class="body-small">
+              Supertypes
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <div>
+                class <span data-unresolved-link="" t="n">Object</span>
+               </div>
+               <div>
+                trait <span data-unresolved-link="" t="n">Matchable</span>
+               </div>
+               <div>
+                class <span data-unresolved-link="" t="n">Any</span>
+               </div><span></span>
+              </div>
+             </dd>
+             <dt class="body-small">
+              Self type
+             </dt>
+             <dd class="body-medium">
+              <div class="mono-small-block supertypes">
+               <span></span>
+               <div>
+                <a href="Lexers$Lexer$.html" t="n">Lexer</a>.<span t="k">type</span>
+               </div>
+              </div>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="documentableList expand">
+       <button class="icon-button show-content expand"></button>
+       <h3 class="h200">combinator</h3>
+       <div class="documentableElement" id="any-0" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">val </span></span><a href="Lexers.html#any-0" t="n" class="documentableName ">any</a>: <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts any single character.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts any single character.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#any-0">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="elem-fffff985" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#elem-fffff985" t="n" class="documentableName ">elem</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">char</span>: <a href="RegExps.html#Character-0" t="t">Character</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts only the single character <code>char</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts only the single character <code>char</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#elem-fffff985">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="elem-983" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#elem-983" t="n" class="documentableName ">elem</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">predicate</span>: <a href="RegExps.html#Character-0" t="t">Character</a><span t="k"> =&gt; </span><span data-unresolved-link="" t="t">Boolean</span>): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts single characters based on a <code>predicate</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts single characters based on a <code>predicate</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#elem-983">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="many-1e4" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#many-1e4" t="n" class="documentableName ">many</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">regExp</span>: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts zero or more repetitions of <code>regExp</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts zero or more repetitions of <code>regExp</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#many-1e4">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="many1-1e4" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#many1-1e4" t="n" class="documentableName ">many1</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">regExp</span>: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts one or more repetitions of <code>regExp</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts one or more repetitions of <code>regExp</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#many1-1e4">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="oneOf-e1d" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#oneOf-e1d" t="n" class="documentableName ">oneOf</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">chars</span>: <span data-unresolved-link="" t="t">Seq</span>[<a href="RegExps.html#Character-0" t="t">Character</a>]): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts any of the characters in <code>chars</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts any of the characters in <code>chars</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#oneOf-e1d">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="opt-1e4" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#opt-1e4" t="n" class="documentableName ">opt</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">regExp</span>: <a href="RegExps$RegExp.html" t="t">RegExp</a>): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts zero or one instances of <code>regExp</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts zero or one instances of <code>regExp</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#opt-1e4">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="documentableElement" id="word-e1d" data-f-inherited="RegExps">
+        <div class="documentableElement-expander">
+         <button class="icon-button ar show-content"></button>
+         <div class="header monospace mono-medium">
+          <div class="signature">
+           <span class="modifiers"></span><span class="kind"><span t="k">def </span></span><a href="Lexers.html#word-e1d" t="n" class="documentableName ">word</a>(<span t="k"></span><span t="k"></span><span data-unresolved-link="" t="n">chars</span>: <span data-unresolved-link="" t="t">Seq</span>[<a href="RegExps.html#Character-0" t="t">Character</a>]): <a href="RegExps$RegExp.html" t="t">RegExp</a>
+          </div>
+         </div>
+        </div>
+        <div class="docs">
+         <span class="modifiers"></span>
+         <div>
+          <div class="originInfo"></div>
+          <div class="memberDocumentation">
+           <div class="documentableBrief doc">
+            <p>Regular expression that accepts only the sequence of characters <code>chars</code>.</p>
+           </div>
+           <div class="cover">
+            <div class="doc">
+             <p>Regular expression that accepts only the sequence of characters <code>chars</code>.</p>
+            </div>
+            <h2 class="h200">Attributes</h2>
+            <dl class="attributes attributes-small">
+             <dt class="body-small">
+              Inherited from:
+             </dt>
+             <dd class="body-medium">
+              <a href="RegExps.html#word-e1d">RegExps</a>
+             </dd>
+            </dl>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="Type-members">
+     <div data-togglable="Type members" class="tab expand">
+      <div class="member-group-header">
+       <h3 data-togglable="Type members" class="h400">Type members</h3>
+      </div>
+      <section id="Types">
+       <div class="documentableList expand">
+        <div class="documentableList-expander">
+         <button class="icon-button show-content expand"></button>
+         <h4 class="groupHeader h200">Types</h4>
+        </div>
+        <div class="documentableElement" id="TokenMaker-0">
+         <div class="documentableElement-expander">
+          <button class="icon-button ar show-content"></button>
+          <div class="header monospace mono-medium">
+           <div class="signature">
+            <span class="modifiers"></span><span class="kind"><span t="k">type </span></span><a href="Lexers.html#TokenMaker-0" t="n" class="documentableName ">TokenMaker</a> = (<span data-unresolved-link="" t="t">Iterable</span>[<a href="RegExps.html#Character-0" t="t">Character</a>], (<a href="Lexers.html#Position-0" t="t">Position</a>, <a href="Lexers.html#Position-0" t="t">Position</a>))<span t="k"> =&gt; </span><a href="Lexers.html#Token-0" t="t">Token</a>
+           </div>
+          </div>
+         </div>
+         <div class="docs">
+          <span class="modifiers"></span>
+          <div>
+           <div class="originInfo"></div>
+           <div class="memberDocumentation">
+            <div class="documentableBrief doc">
+             <p>Type of functions that create tokens.</p>
+            </div>
+            <div class="cover">
+             <div class="doc">
+              <p>Type of functions that create tokens.</p>
+             </div>
+             <h2 class="h200">Attributes</h2>
+             <dl class="attributes attributes-small"></dl>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+    </section>
+   </div>
+  </div>
+ </div>
+</section></div><div id="toc" class="body-small"><div id="toc-container"><span class="toc-title h200">In this article</span><nav class="toc-nav"><ul class="toc-list"><li><a href="#attributes">Attributes</a></li><li><a href="#members-list">Members list</a><ul><li><a href="#Grouped-members">Grouped members</a></li><li><a href="#Type-members">Type members</a><ul><li><a href="#Types">Types</a></li></ul></li></ul></li></ul></nav></div></div></div><div id="footer" class="body-small mobile-footer"><div class="left-container">Generated with</div><div class="right-container"><div class="text"></div></div><div class="text-mobile"></div></div></div></div></body></html>
